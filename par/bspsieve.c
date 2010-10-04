@@ -16,6 +16,16 @@ double bspip(int p, int s, int n, double *x, double *y);
 int P; /* number of processors requested */ 
 int N; /* requested max prime */
 
+int findMinimum(int p, int* ks)
+{
+
+    int min = INT_MAX;
+    int i;
+    for(i = 0; i<p; i++)
+        min = MIN(ks[i], min);
+
+    return min;
+}
 int globalIdx(int p, int s, int n, int local)
 {
     return local+blockLow(p,s,n);
@@ -47,9 +57,9 @@ int blockSize(int p, int s, int n){
     return  blockLow(p,s+1,n)-blockLow(p,s,n) ; 
 
 } /* end blockSize */
-
+/*
 double bspip(int p, int s, int n, double *x, double *y){
-    /* Compute inner product of vectors x and y of length n>=0 */
+    // Compute inner product of vectors x and y of length n>=0 
 
     double inprod, *Inprod, alpha;
     int i, t;
@@ -74,8 +84,9 @@ double bspip(int p, int s, int n, double *x, double *y){
 
     return alpha;
 
-} /* end bspip */
+} // end bspip 
 
+*/
 void bspmarkmultiples(int p, int s, int n, int k, int *x)
 {
     // mark all multiples of k as non-prime in x
@@ -159,23 +170,15 @@ void bspsieve(){
             for(i=0;i<p; i++)
             {
                 bsp_get(i, &k, 0, &ks[i], SZINT);
-                printf("got k = %d from proc %d\n", ks[i], i);
             }
-
         }
 
         bsp_sync();
         bsp_pop_reg(&k);
-        /*
-         * if proc 0
-         *    read all k from 0..P
-         * k <- findMin k's
-         * repeat "begin work" until k > sqrt(n)
-         */
-        
 
-
+        k = findMinimum(p,ks);
     }
+
     // end work
     bsp_sync();  
     time1=bsp_time();
