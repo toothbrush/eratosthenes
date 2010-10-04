@@ -1,3 +1,4 @@
 *.o
 ip
 sieve
+.*.swp
