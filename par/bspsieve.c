@@ -91,6 +91,11 @@ void bspmarkmultiples(int p, int s, int n, int k, int *x)
 {
     // mark all multiples of k as non-prime in x
 
+    int i;
+    for (i=k; i * k  <= blockHigh(p,s,n); i++)
+    {
+        x[localIdx(p,s,n,i*k)] = 0; //not a prime
+    }
 
 
 } /* end bspmarkmultiples */
@@ -174,9 +179,16 @@ void bspsieve(){
         }
 
         bsp_sync();
-        bsp_pop_reg(&k);
 
-        k = findMinimum(p,ks);
+        if(s==0)
+        {
+            k = findMinimum(p,ks);
+            // broadcast the new minimum and continue processing
+            for(i = 0; i< p ; i++)
+                bsp_put(i, &k, &k, 0, SZINT);
+        }
+        bsp_pop_reg(&k);
+        bsp_sync();
     }
 
     // end work
@@ -185,7 +197,9 @@ void bspsieve(){
 
     printf("Processor %d primes: \n", s); 
     for(i = 0; i < blockSize(p,s,n); i++)
-        printf("  %d is prime\n", globalIdx(p,s,n,i));
+        if( x[i] != 0)
+            printf("  %d is prime\n", globalIdx(p,s,n,i));
+//        printf(" x[%d] = %d\n", i, x[i]);
 
     fflush(stdout);
     if (s==0){
