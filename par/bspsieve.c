@@ -57,48 +57,26 @@ int blockSize(int p, int s, int n){
     return  blockLow(p,s+1,n)-blockLow(p,s,n) ; 
 
 } /* end blockSize */
-/*
-double bspip(int p, int s, int n, double *x, double *y){
-    // Compute inner product of vectors x and y of length n>=0 
 
-    double inprod, *Inprod, alpha;
-    int i, t;
-  
-    Inprod= vecallocd(p); bsp_push_reg(Inprod,p*SZDBL);
-    bsp_sync();
-
-    inprod= 0.0;
-    for (i=0; i<blockSize(p,s,n); i++){
-        inprod += x[i]*y[i];
-    }
-    for (t=0; t<p; t++){
-        bsp_put(t,&inprod,Inprod,s*SZDBL,SZDBL);
-    }
-    bsp_sync();
-
-    alpha= 0.0;
-    for (t=0; t<p; t++){
-        alpha += Inprod[t];
-    }
-    bsp_pop_reg(Inprod); vecfreed(Inprod);
-
-    return alpha;
-
-} // end bspip 
-
-*/
 void bspmarkmultiples(int p, int s, int n, int k, int *x)
 {
     // mark all multiples of k as non-prime in x
+    /*
+     * if (prime * prime > low_value)
+     * first = prime * prime - low_value;
+     * else {
+     * if (!(low_value % prime)) first = 0;
+     * else first = prime - (low_value % prime);
+     * }
+     * for (i = first; i < size; i += prime) marked[i] = 1;
+     */
 
     int i;
     for (i=0; i < blockSize(p,s,n); i++)
     {
         if(x[i] % k == 0 
-                && x[i] != k) // important! don't cross out the prime itself
+        && x[i]     != k) // important! don't cross out the prime itself
         {
-            if(x[i] == 2) 
-                printf("oh shit\n");
             x[i] = 0; //not a prime
         }
     }
@@ -112,20 +90,18 @@ int nextPrime(int p, int s, int n, int k, int *x)
 
     int newK = k+1;
     int local = MAX(
-            localIdx(p,s,n,newK),
-            0);
+                    localIdx(p,s,n,newK),
+                    0); // don't consider primes outside our range
+
     while(local < blockHigh(p,s,n) && x[local] == 0)
         local++;
 
     if(local > blockSize(p,s,n))
     {
-        printf("help? no primes for proc %d?\n", s);
-        return INT_MAX;
+        return INT_MAX; // no primes for this processor. This is possible.
     }
 
     // if we get here we assume we found a prime!
-
-    printf("next prime found: %d (local index = %d)\n", globalIdx(p,s,n,local), local);
 
     return globalIdx(p,s,n,local);
 
@@ -158,15 +134,15 @@ void bspsieve(){
     bsp_sync();
     bsp_pop_reg(&n);
 
-    printf("proc %d thinks N (+1) = %d\n", s, n);
-
     nl= blockSize(p,s,n); // how big must s's block be?
     x= vecalloci(nl);
     for (i=0; i<nl; i++){
-        // start by assuming everything is prime
+        // start by assuming everything is prime, except 1
         iglob= globalIdx(p,s,n,i);
         x[i]= iglob;
     }
+    if(s==0)
+        x[1]=0;
     bsp_sync(); 
     time0=bsp_time();
     k = 2;
@@ -213,7 +189,6 @@ void bspsieve(){
     for(i = 0; i < blockSize(p,s,n); i++)
         if( x[i] != 0)
             printf("  %d is prime\n", globalIdx(p,s,n,i));
-//        printf(" x[%d] = %d\n", i, x[i]);
 
     fflush(stdout);
     if (s==0){
@@ -232,9 +207,18 @@ int main(int argc, char **argv){
     bsp_init(bspsieve, argc, argv);
 
     /* sequential part */
+    if (argc != 2)
+    {
+        printf("Usage: %s N\n", argv[0]);
+        bsp_abort("Incorrect invocation.\n");
+    }
     sscanf(argv[1], "%d", &N);
+
     printf("max prime requested = %d\n", N);
     P = bsp_nprocs(); // maximum amount of procs
+
+    if ( blockSize(P, 0, N) < sqrt(N))
+        printf("WARNING: such a large P (%d) with relatively small N (%d) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
 
     /* SPMD part */
     bspsieve();
