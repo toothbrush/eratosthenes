@@ -8,3 +8,5 @@ sieve: sieve.o
 sieve.o: sieve.c
 	gcc -c sieve.c
 
+clean:
+	rm -v sieve{,.o}
