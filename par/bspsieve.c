@@ -1,8 +1,12 @@
 #include "bspedupack.h"
 #include <limits.h>
 
-/* This program computes all prime numbers <= a given integer N.  
-*/
+/* 
+ * Author: Paul van der Walt
+ * october 2010
+ *
+ * This program computes all prime numbers <= a given integer N.  
+ */
 
 // prototypes: 
 int blockSize(int, int, int);
@@ -13,6 +17,7 @@ int globalIdx(int, int, int, int);
 int localIdx(int, int, int, int);
 double bspip(int p, int s, int n, double *x, double *y);
 
+//globals:
 int P; /* number of processors requested */ 
 int N; /* requested max prime */
 
@@ -62,23 +67,26 @@ void bspmarkmultiples(int p, int s, int n, int k, int *x)
 {
     // mark all multiples of k as non-prime in x
     /*
-     * if (prime * prime > low_value)
-     * first = prime * prime - low_value;
-     * else {
      * if (!(low_value % prime)) first = 0;
      * else first = prime - (low_value % prime);
-     * }
-     * for (i = first; i < size; i += prime) marked[i] = 1;
      */
 
     int i;
-    for (i=0; i < blockSize(p,s,n); i++)
+    int first;
+
+    if(k * k > blockLow(p,s,n)) // k is in our block, or beyond
+        first = k * k - blockLow(p,s,n);
+    else // k falls before our block; 
     {
-        if(x[i] % k == 0 
-        && x[i]     != k) // important! don't cross out the prime itself
-        {
-            x[i] = 0; //not a prime
-        }
+        if(!(blockLow(p,s,n) % k)) // first element in our block is divisible by k
+            first = 0;
+        else
+            first = k - (blockLow(p,s,n) % k); // start at first multiple of k in block
+    }
+
+    for (i=first; i < blockSize(p,s,n); i+= k)
+    {
+        x[i] = 0; //not a prime
     }
 
 
@@ -115,7 +123,7 @@ void bspsieve(){
     int p, s, n, nl, i, iglob;
     int k;   // the current largest sure-prime
 
-    n = N+1; // copy global N and increase by 1.
+    n = N+1; // copy global N and increase by 1. (only proc 1 knows this)
              // this is so the maximum array idx == N
     
     bsp_begin(P);
@@ -148,7 +156,7 @@ void bspsieve(){
     k = 2;
     // begin work
 
-    while(k < sqrt(n))
+    while( k*k <= n )
     {
         bspmarkmultiples(p,s,n,k,x);
         k = nextPrime(p,s,n,k,x);
@@ -175,7 +183,6 @@ void bspsieve(){
 
         //broadcast minimum 
         bsp_get(0,&k,0,&k,SZINT); 
-        //printf("we got k = %d from proc0\n", k);
         bsp_sync();
 
         bsp_pop_reg(&k);
@@ -200,7 +207,7 @@ void bspsieve(){
     vecfreei(x);
     bsp_end();
 
-} /* end bspinprod */
+} /* end bspsieve */
 
 int main(int argc, char **argv){
 
