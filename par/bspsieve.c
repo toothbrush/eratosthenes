@@ -92,9 +92,15 @@ void bspmarkmultiples(int p, int s, int n, int k, int *x)
     // mark all multiples of k as non-prime in x
 
     int i;
-    for (i=k; i * k  <= blockHigh(p,s,n); i++)
+    for (i=0; i < blockSize(p,s,n); i++)
     {
-        x[localIdx(p,s,n,i*k)] = 0; //not a prime
+        if(x[i] % k == 0 
+                && x[i] != k) // important! don't cross out the prime itself
+        {
+            if(x[i] == 2) 
+                printf("oh shit\n");
+            x[i] = 0; //not a prime
+        }
     }
 
 
@@ -105,11 +111,13 @@ int nextPrime(int p, int s, int n, int k, int *x)
     // find minimal i s.t. i > k and i unmarked
 
     int newK = k+1;
-    int local = localIdx(p,s,n,newK);
+    int local = MAX(
+            localIdx(p,s,n,newK),
+            0);
     while(local < blockHigh(p,s,n) && x[local] == 0)
         local++;
 
-    if(local > blockHigh(p,s,n))
+    if(local > blockSize(p,s,n))
     {
         printf("help? no primes for proc %d?\n", s);
         return INT_MAX;
@@ -142,12 +150,14 @@ void bspsieve(){
             bsp_abort("Error in input: n is negative");
         ks = vecalloci(p);
     }
-//    bsp_push_reg(&n,SZINT);
-//    bsp_sync();
-//
-//    bsp_get(0,&n,0,&n,SZINT); //everyone reads N from proc 0
-//    bsp_sync();
-//    bsp_pop_reg(&n);
+
+    bsp_push_reg(&n,SZINT);
+    bsp_sync();
+
+    bsp_get(0,&n,0,&n,SZINT); //everyone reads N from proc 0
+    bsp_sync();
+    bsp_pop_reg(&n);
+
     printf("proc %d thinks N (+1) = %d\n", s, n);
 
     nl= blockSize(p,s,n); // how big must s's block be?
@@ -172,7 +182,8 @@ void bspsieve(){
 
         if(s==0)
         {
-            for(i=0;i<p; i++)
+            ks[0] = k; // my k
+            for(i=1;i<p; i++)
             {
                 bsp_get(i, &k, 0, &ks[i], SZINT);
             }
@@ -183,12 +194,15 @@ void bspsieve(){
         if(s==0)
         {
             k = findMinimum(p,ks);
-            // broadcast the new minimum and continue processing
-            for(i = 0; i< p ; i++)
-                bsp_put(i, &k, &k, 0, SZINT);
         }
-        bsp_pop_reg(&k);
         bsp_sync();
+
+        //broadcast minimum 
+        bsp_get(0,&k,0,&k,SZINT); 
+        //printf("we got k = %d from proc0\n", k);
+        bsp_sync();
+
+        bsp_pop_reg(&k);
     }
 
     // end work
