@@ -1,2 +1,4 @@
 *.o
 ip
+sieve
+.*.swp
