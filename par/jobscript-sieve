@@ -1,8 +1,8 @@
-# @ node = 2
+# @ node = 64
 #
 # request 4 processors
 #
-# @ tasks_per_node = 64
+# @ tasks_per_node = 1
 # @ notification = never
 # @ input = /dev/null
 # @ output = out-parsieve.$(jobid)
