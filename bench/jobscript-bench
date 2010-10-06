@@ -1,13 +1,11 @@
-# @ node = 4
-#
-# request 4 processors
+# @ node = 2
 #
 # @ tasks_per_node = 64
 # @ notification = never
 # @ input = /dev/null
-# @ output = out.$(jobid)
-# @ error = err.$(jobid)
-# @ wall_clock_limit = 1:00
+# @ output = out-128proc.$(jobid)
+# @ error = err-128proc.$(jobid)
+# @ wall_clock_limit = 200:00
 # @ job_type = parallel
 #
 # @ queue

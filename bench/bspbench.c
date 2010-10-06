@@ -168,6 +168,7 @@ int main(int argc, char **argv){
     bsp_init(bspbench, argc, argv);
     //printf("How many processors do you want to use?\n"); fflush(stdout);
     //scanf("%d",&P);
+    printf("Found %d processors.\n", bsp_nprocs());
     P = bsp_nprocs();
     if (P > bsp_nprocs()){
         printf("Sorry, not enough processors available.\n");
