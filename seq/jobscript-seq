@@ -1,0 +1,15 @@
+# @ node = 1
+#
+# @ tasks_per_node = 1
+# @ notification = never
+# @ input = /dev/null
+# @ output = out-seq.$(jobid)
+# @ error = err-seq.$(jobid)
+# @ wall_clock_limit = 200:00
+# @ job_type = serial
+#
+# @ queue
+#
+# @ node_usage = shared
+cd $HOME/Students10/pdwalt/eratosthenes/seq
+./sieve 1000000000
