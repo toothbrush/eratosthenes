@@ -10,8 +10,15 @@ int main(int argc, char** argv)
 {
     int N, i;
     printf("Hi! Welcome to sequential sieve.\n");
-    printf("Enter N = ");
-    scanf("%d", &N);
+    //printf("Enter N = ");
+    if(argc != 2) {
+        printf("Incorrect arguments idiot.\n");
+        exit(1);
+    }
+    else
+    {
+        sscanf(argv[1], "%d", &N);
+    }
 
     // --- begin
 
