@@ -1,4 +1,4 @@
-CC= mpicc
+CC= mpcc
 #CFLAGS= -O3 
 CFLAGS= -lbsponmpi
 LFLAGS= -lm 
