@@ -1,4 +1,4 @@
-#include "../bspedupack.h"
+#include "bspedupack.h"
 #include <limits.h>
 
 /* 

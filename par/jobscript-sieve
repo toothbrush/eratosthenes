@@ -1,8 +1,9 @@
-# @ node = 4
+# commentaar
+# @ node = 1
 #
 # request 4 processors
 #
-# @ tasks_per_node = 64
+# @ tasks_per_node = 4
 # @ notification = never
 # @ input = /dev/null
 # @ output = out.$(jobid)

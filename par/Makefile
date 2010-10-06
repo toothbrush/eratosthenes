@@ -13,14 +13,14 @@ all: sieve
 sieve: $(OBJSIEVE)
 	$(CC) $(CFLAGS) -o sieve $(OBJSIEVE) $(LFLAGS)
 
-bspsieve.o: bspsieve.c ../bspedupack.h
+bspsieve.o: bspsieve.c bspedupack.h
 	$(CC) $(CFLAGS) -c bspsieve.c
 
 #bspinprod.o: bspinprod.c bspedupack.h
 #	$(CC) $(CFLAGS) -c bspinprod.c
 
-bspedupack.o: ../bspedupack.c ../bspedupack.h
-	$(CC) $(CFLAGS) -c ../bspedupack.c
+bspedupack.o: bspedupack.c bspedupack.h
+	$(CC) $(CFLAGS) -c bspedupack.c
 
 clean:
 	rm -f *.o ip sieve
