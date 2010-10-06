@@ -1,0 +1,18 @@
+# commentaar
+# @ node = 1
+#
+# request 4 processors
+#
+# @ tasks_per_node = 4
+# @ notification = never
+# @ input = /dev/null
+# @ output = out.$(jobid)
+# @ error = err.$(jobid)
+# @ wall_clock_limit = 1:00
+# @ job_type = parallel
+#
+# @ queue
+#
+# @ node_usage = shared
+cd $HOME/Students10/pdwalt/eratosthenes/par
+./sieve 10000
