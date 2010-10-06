@@ -1,2 +1,4 @@
 err.*
 out.*
+*.o
+bench
