@@ -101,17 +101,19 @@ int nextPrime(int p, int s, int n, int k, int *x)
                     localIdx(p,s,n,newK),
                     0); // don't consider primes outside our range
 
-    while(local < blockHigh(p,s,n) && x[local] == 0)
+    while(local < blockSize(p,s,n)-1 && x[local] == 0)
         local++;
 
-    if(local > blockSize(p,s,n))
+    if(x[local] == 0)
     {
         return INT_MAX; // no primes for this processor. This is possible.
     }
+    else
+    {
+        // if we get here we assume we found a prime!
 
-    // if we get here we assume we found a prime!
-
-    return globalIdx(p,s,n,local);
+        return globalIdx(p,s,n,local);
+    }
 
 } /* end nextPrime */
 
@@ -226,6 +228,8 @@ int main(int argc, char **argv){
 
     if ( blockSize(P, 0, N) < sqrt(N))
         printf("WARNING: such a large P (%d) with relatively small N (%d) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
+
+    printf("Using %d processors. \n", P);
 
     /* SPMD part */
     bspsieve();
