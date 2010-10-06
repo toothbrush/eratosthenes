@@ -25,8 +25,10 @@ int main(int argc, char** argv)
     enum bool *A = malloc(sizeof(enum bool)*N);
 
     A[0] = false;
-    for(i = 1; i < N; i++)
+    A[1] = false;
+    for(i = 2; i < N; i++)
     {
+        //assume all are prime to start with.
         A[i] = true;
     }
 
