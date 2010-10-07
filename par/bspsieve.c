@@ -145,7 +145,9 @@ void bspsieve(){
     bsp_pop_reg(&n);
 
     nl= blockSize(p,s,n); // how big must s's block be?
+    printf("Try to alloc vec of %d ints = %d bytes\n", nl, nl*SZINT);
     x= vecalloci(nl);
+
     for (i=0; i<nl; i++){
         // start by assuming everything is prime, except 1
         iglob= globalIdx(p,s,n,i);
