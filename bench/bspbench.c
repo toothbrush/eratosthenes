@@ -1,7 +1,7 @@
 #include "../bspedupack.h"
  
 /*  This program measures p, r, g, and l of a BSP computer
-    using bsp_put for communication.
+    using bsp_get for communication.
 */
 
 #define NITERS 100     /* number of iterations */
@@ -61,7 +61,11 @@ void bspbench(){
     p= bsp_nprocs(); /* p = number of processors obtained */
     s= bsp_pid();    /* s = processor number */
   
-    Time= vecallocd(p); bsp_push_reg(Time,p*SZDBL);
+    Time= vecallocd(p); 
+    
+    //bsp_push_reg(Time,p*SZDBL);
+
+    bsp_push_reg(&time, SZDBL);
     dest= vecallocd(2*MAXH+p); bsp_push_reg(dest,(2*MAXH+p)*SZDBL);
     bsp_sync();
 
@@ -83,7 +87,14 @@ void bspbench(){
         }
         time1= bsp_time(); 
         time= time1-time0; 
-        bsp_put(0,&time,Time,s*SZDBL,SZDBL);
+        //bsp_put(0,&time,Time,s*SZDBL,SZDBL);
+
+    //    bsp_sync();
+    //    working get substitution.
+        if(s==0)
+            for(s1=0; s1<p; s1++) {
+                bsp_get(s1, &time, 0,  &Time[s1], SZDBL);
+            }
         bsp_sync();
     
         /* Processor 0 determines minimum, maximum, average computing rate */
@@ -131,7 +142,10 @@ void bspbench(){
         time0= bsp_time(); 
         for (iter=0; iter<NITERS; iter++){
             for (i=0; i<h; i++)
-                bsp_put(destproc[i],&src[i],dest,destindex[i]*SZDBL,SZDBL);
+            {
+                //bsp_put(destproc[i],&src[i],dest,destindex[i]*SZDBL,SZDBL);
+                bsp_get(destproc[i], dest, destindex[i]*SZDBL, &src[i], SZDBL);
+            }
             bsp_sync(); 
         }
         time1= bsp_time();
