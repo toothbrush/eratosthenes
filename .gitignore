@@ -1,4 +1,1 @@
-err.*
-out.*
 *.o
-bench
