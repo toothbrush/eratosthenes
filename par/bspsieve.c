@@ -194,10 +194,13 @@ void bspsieve(){
     bsp_sync();  
     time1=bsp_time();
 
-    printf("Processor %d primes: \n", s); 
+    int primes= 0;
+    //printf("Processor %d primes: \n", s); 
     for(i = 0; i < blockSize(p,s,n); i++)
         if( x[i] != 0)
-            printf("  %d is prime\n", globalIdx(p,s,n,i));
+            primes++;
+     //       printf("  %d is prime\n", globalIdx(p,s,n,i));
+     printf("proc %d finds %d primes.\n", s, primes);
 
     fflush(stdout);
     if (s==0){
