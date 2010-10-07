@@ -1,0 +1,555 @@
+Found 128 processors.
+n=     1 min=  64.528 max= 139.810 av=  81.322 Mflop/s  fool=    0.0
+n=     2 min=  72.944 max= 134.218 av= 100.854 Mflop/s  fool=   -9.1
+n=     4 min=   9.193 max= 134.218 av= 117.498 Mflop/s  fool=  -27.3
+n=     8 min=  88.886 max= 161.708 av= 138.751 Mflop/s  fool=  -63.8
+n=    16 min= 127.826 max= 168.827 av= 154.488 Mflop/s  fool= -136.7
+n=    32 min=  46.725 max= 177.772 av= 160.726 Mflop/s  fool= -282.4
+n=    64 min=  49.232 max= 182.609 av= 167.757 Mflop/s  fool= -574.0
+n=   128 min= 103.844 max= 184.175 av= 170.600 Mflop/s  fool=-1157.1
+n=   256 min=  72.209 max= 186.171 av= 174.141 Mflop/s  fool=-2323.3
+n=   512 min= 112.714 max= 186.373 av= 177.661 Mflop/s  fool=-4655.8
+n=  1024 min= 145.604 max= 185.248 av= 180.369 Mflop/s  fool=-9320.7
+Time of     0-relation= 1.043655 sec= 188242927 flops
+Time of     1-relation= 0.528016 sec= 95237689 flops
+Time of     2-relation= 0.449069 sec= 80998159 flops
+Time of     3-relation= 0.651000 sec= 117420210 flops
+Time of     4-relation= 0.574583 sec= 103636965 flops
+Time of     5-relation= 0.701442 sec= 126518280 flops
+Time of     6-relation= 1.364615 sec= 246134265 flops
+Time of     7-relation= 0.883142 sec= 159291455 flops
+Time of     8-relation= 1.201262 sec= 216670325 flops
+Time of     9-relation= 0.437274 sec= 78870575 flops
+Time of    10-relation= 0.579106 sec= 104452822 flops
+Time of    11-relation= 0.702974 sec= 126794654 flops
+Time of    12-relation= 0.788419 sec= 142206311 flops
+Time of    13-relation= 0.795788 sec= 143535430 flops
+Time of    14-relation= 1.128757 sec= 203592742 flops
+Time of    15-relation= 0.561875 sec= 101344787 flops
+Time of    16-relation= 1.431545 sec= 258206232 flops
+Time of    17-relation= 0.641361 sec= 115681674 flops
+Time of    18-relation= 0.965051 sec= 174065205 flops
+Time of    19-relation= 1.900144 sec= 342726972 flops
+Time of    20-relation= 0.593789 sec= 107101041 flops
+Time of    21-relation= 0.332773 sec= 60021968 flops
+Time of    22-relation= 1.225740 sec= 221085501 flops
+Time of    23-relation= 0.774579 sec= 139709981 flops
+Time of    24-relation= 0.127671 sec= 23027926 flops
+Time of    25-relation= 1.161007 sec= 209409682 flops
+Time of    26-relation= 0.812341 sec= 146521067 flops
+Time of    27-relation= 0.366771 sec= 66154145 flops
+Time of    28-relation= 1.029231 sec= 185641316 flops
+Time of    29-relation= 0.726935 sec= 131116489 flops
+Time of    30-relation= 1.332017 sec= 240254498 flops
+Time of    31-relation= 1.209215 sec= 218104920 flops
+Time of    32-relation= 0.344695 sec= 62172287 flops
+Time of    33-relation= 1.038764 sec= 187360846 flops
+Time of    34-relation= 1.579532 sec= 284898486 flops
+Time of    35-relation= 0.518875 sec= 93588888 flops
+Time of    36-relation= 0.598399 sec= 107932621 flops
+Time of    37-relation= 0.360111 sec= 64952796 flops
+Time of    38-relation= 1.216426 sec= 219405525 flops
+Time of    39-relation= 1.178841 sec= 212626301 flops
+Time of    40-relation= 0.370564 sec= 66838182 flops
+Time of    41-relation= 1.942837 sec= 350427594 flops
+Time of    42-relation= 0.524609 sec= 94623264 flops
+Time of    43-relation= 1.097711 sec= 197992956 flops
+Time of    44-relation= 0.198590 sec= 35819510 flops
+Time of    45-relation= 0.747550 sec= 134834812 flops
+Time of    46-relation= 0.852565 sec= 153776253 flops
+Time of    47-relation= 0.647614 sec= 116809484 flops
+Time of    48-relation= 0.473600 sec= 85422688 flops
+Time of    49-relation= 0.997117 sec= 179848887 flops
+Time of    50-relation= 1.194269 sec= 215409105 flops
+Time of    51-relation= 1.147311 sec= 206939372 flops
+Time of    52-relation= 0.438772 sec= 79140931 flops
+Time of    53-relation= 0.744799 sec= 134338687 flops
+Time of    54-relation= 0.525714 sec= 94822555 flops
+Time of    55-relation= 1.300890 sec= 234640137 flops
+Time of    56-relation= 0.570255 sec= 102856346 flops
+Time of    57-relation= 0.303218 sec= 54691064 flops
+Time of    58-relation= 0.937235 sec= 169048096 flops
+Time of    59-relation= 0.582000 sec= 104974725 flops
+Time of    60-relation= 0.060254 sec= 10868030 flops
+Time of    61-relation= 0.256011 sec= 46176431 flops
+Time of    62-relation= 0.371348 sec= 66979733 flops
+Time of    63-relation= 0.461320 sec= 83207881 flops
+Time of    64-relation= 0.579789 sec= 104575986 flops
+Time of    65-relation= 0.339355 sec= 61209147 flops
+Time of    66-relation= 0.510853 sec= 92141944 flops
+Time of    67-relation= 1.453031 sec= 262081674 flops
+Time of    68-relation= 0.726232 sec= 130989672 flops
+Time of    69-relation= 0.414592 sec= 74779533 flops
+Time of    70-relation= 0.388129 sec= 70006503 flops
+Time of    71-relation= 0.348009 sec= 62769996 flops
+Time of    72-relation= 0.534044 sec= 96324890 flops
+Time of    73-relation= 0.772447 sec= 139325433 flops
+Time of    74-relation= 0.758769 sec= 136858422 flops
+Time of    75-relation= 0.549075 sec= 99036050 flops
+Time of    76-relation= 0.788510 sec= 142222647 flops
+Time of    77-relation= 0.628112 sec= 113291930 flops
+Time of    78-relation= 0.946284 sec= 170680283 flops
+Time of    79-relation= 0.469925 sec= 84759926 flops
+Time of    80-relation= 1.179104 sec= 212673697 flops
+Time of    81-relation= 0.824162 sec= 148653281 flops
+Time of    82-relation= 0.768822 sec= 138671608 flops
+Time of    83-relation= 0.679523 sec= 122564922 flops
+Time of    84-relation= 1.398450 sec= 252237029 flops
+Time of    85-relation= 0.562294 sec= 101420394 flops
+Time of    86-relation= 0.945234 sec= 170490815 flops
+Time of    87-relation= 0.508323 sec= 91685766 flops
+Time of    88-relation= 0.669804 sec= 120811777 flops
+Time of    89-relation= 0.585378 sec= 105583987 flops
+Time of    90-relation= 0.180229 sec= 32507634 flops
+Time of    91-relation= 0.502056 sec= 90555353 flops
+Time of    92-relation= 0.458146 sec= 82635338 flops
+Time of    93-relation= 0.052342 sec=  9440914 flops
+Time of    94-relation= 1.190839 sec= 214790393 flops
+Time of    95-relation= 0.650224 sec= 117280211 flops
+Time of    96-relation= 1.406775 sec= 253738518 flops
+Time of    97-relation= 0.730107 sec= 131688715 flops
+Time of    98-relation= 0.187369 sec= 33795638 flops
+Time of    99-relation= 0.538501 sec= 97128960 flops
+Time of   100-relation= 1.369170 sec= 246955842 flops
+Time of   101-relation= 0.741453 sec= 133735149 flops
+Time of   102-relation= 0.329959 sec= 59514320 flops
+Time of   103-relation= 1.304248 sec= 235245903 flops
+Time of   104-relation= 1.105039 sec= 199314786 flops
+Time of   105-relation= 0.442679 sec= 79845636 flops
+Time of   106-relation= 0.857010 sec= 154577993 flops
+Time of   107-relation= 0.181096 sec= 32664070 flops
+Time of   108-relation= 0.640755 sec= 115572295 flops
+Time of   109-relation= 0.317347 sec= 57239605 flops
+Time of   110-relation= 0.559433 sec= 100904384 flops
+Time of   111-relation= 0.982045 sec= 177130381 flops
+Time of   112-relation= 0.237468 sec= 42831791 flops
+Time of   113-relation= 0.963519 sec= 173788988 flops
+Time of   114-relation= 0.291134 sec= 52511577 flops
+Time of   115-relation= 1.085364 sec= 195766045 flops
+Time of   116-relation= 0.581077 sec= 104808234 flops
+Time of   117-relation= 0.817999 sec= 147541712 flops
+Time of   118-relation= 0.677857 sec= 122264309 flops
+Time of   119-relation= 0.425859 sec= 76811821 flops
+Time of   120-relation= 1.418195 sec= 255798323 flops
+Time of   121-relation= 0.756528 sec= 136454188 flops
+Time of   122-relation= 1.377370 sec= 248434801 flops
+Time of   123-relation= 1.257666 sec= 226843900 flops
+Time of   124-relation= 0.428194 sec= 77232980 flops
+Time of   125-relation= 0.603058 sec= 108772878 flops
+Time of   126-relation= 0.046403 sec=  8369618 flops
+Time of   127-relation= 0.502490 sec= 90633693 flops
+Time of   128-relation= 0.254152 sec= 45841105 flops
+Time of   129-relation= 0.675264 sec= 121796603 flops
+Time of   130-relation= 0.229392 sec= 41375209 flops
+Time of   131-relation= 0.194107 sec= 35010852 flops
+Time of   132-relation= 1.122805 sec= 202519261 flops
+Time of   133-relation= 0.738788 sec= 133254368 flops
+Time of   134-relation= 0.216366 sec= 39025718 flops
+Time of   135-relation= 0.193149 sec= 34838079 flops
+Time of   136-relation= 0.599974 sec= 108216726 flops
+Time of   137-relation= 0.362561 sec= 65394667 flops
+Time of   138-relation= 0.272565 sec= 49162255 flops
+Time of   139-relation= 1.219893 sec= 220030764 flops
+Time of   140-relation= 0.619945 sec= 111818894 flops
+Time of   141-relation= 0.292460 sec= 52750700 flops
+Time of   142-relation= 1.223624 sec= 220703802 flops
+Time of   143-relation= 0.657673 sec= 118623799 flops
+Time of   144-relation= 0.565273 sec= 101957710 flops
+Time of   145-relation= 0.058234 sec= 10503565 flops
+Time of   146-relation= 0.058991 sec= 10640229 flops
+Time of   147-relation= 0.385462 sec= 69525446 flops
+Time of   148-relation= 0.268819 sec= 48486667 flops
+Time of   149-relation= 0.357952 sec= 64563491 flops
+Time of   150-relation= 0.558180 sec= 100678398 flops
+Time of   151-relation= 0.583821 sec= 105303255 flops
+Time of   152-relation= 0.607800 sec= 109628331 flops
+Time of   153-relation= 1.000394 sec= 180439956 flops
+Time of   154-relation= 0.255082 sec= 46008940 flops
+Time of   155-relation= 1.078662 sec= 194557217 flops
+Time of   156-relation= 0.339823 sec= 61293437 flops
+Time of   157-relation= 0.343626 sec= 61979377 flops
+Time of   158-relation= 0.385909 sec= 69605924 flops
+Time of   159-relation= 0.159030 sec= 28684034 flops
+Time of   160-relation= 0.185926 sec= 33535232 flops
+Time of   161-relation= 1.004074 sec= 181103873 flops
+Time of   162-relation= 0.429460 sec= 77461333 flops
+Time of   163-relation= 1.230542 sec= 221951633 flops
+Time of   164-relation= 0.117405 sec= 21176264 flops
+Time of   165-relation= 0.052147 sec=  9405694 flops
+Time of   166-relation= 0.351932 sec= 63477619 flops
+Time of   167-relation= 0.059660 sec= 10760838 flops
+Time of   168-relation= 0.047320 sec=  8535078 flops
+Time of   169-relation= 0.873143 sec= 157487957 flops
+Time of   170-relation= 0.118254 sec= 21329401 flops
+Time of   171-relation= 0.322016 sec= 58081685 flops
+Time of   172-relation= 0.238518 sec= 43021287 flops
+Time of   173-relation= 0.374185 sec= 67491393 flops
+Time of   174-relation= 0.302756 sec= 54607717 flops
+Time of   175-relation= 0.102882 sec= 18556717 flops
+Time of   176-relation= 0.379367 sec= 68426047 flops
+Time of   177-relation= 0.052289 sec=  9431338 flops
+Time of   178-relation= 0.045264 sec=  8164147 flops
+Time of   179-relation= 0.094968 sec= 17129192 flops
+Time of   180-relation= 0.210920 sec= 38043388 flops
+Time of   181-relation= 0.286267 sec= 51633653 flops
+Time of   182-relation= 0.794000 sec= 143213046 flops
+Time of   183-relation= 0.182545 sec= 32925363 flops
+Time of   184-relation= 0.055774 sec= 10059913 flops
+Time of   185-relation= 0.530506 sec= 95686795 flops
+Time of   186-relation= 0.044339 sec=  7997456 flops
+Time of   187-relation= 0.336186 sec= 60637444 flops
+Time of   188-relation= 0.044042 sec=  7943750 flops
+Time of   189-relation= 0.316988 sec= 57174739 flops
+Time of   190-relation= 0.586971 sec= 105871334 flops
+Time of   191-relation= 0.050964 sec=  9192407 flops
+Time of   192-relation= 0.709904 sec= 128044650 flops
+Time of   193-relation= 0.492294 sec= 88794633 flops
+Time of   194-relation= 0.363930 sec= 65641724 flops
+Time of   195-relation= 0.773584 sec= 139530552 flops
+Time of   196-relation= 0.429024 sec= 77382638 flops
+Time of   197-relation= 0.191433 sec= 34528578 flops
+Time of   198-relation= 0.211639 sec= 38173151 flops
+Time of   199-relation= 0.047214 sec=  8515957 flops
+Time of   200-relation= 0.410312 sec= 74007522 flops
+Time of   201-relation= 0.366765 sec= 66153023 flops
+Time of   202-relation= 0.048245 sec=  8701982 flops
+Time of   203-relation= 0.157611 sec= 28428159 flops
+Time of   204-relation= 0.570164 sec= 102839875 flops
+Time of   205-relation= 0.235538 sec= 42483751 flops
+Time of   206-relation= 0.045528 sec=  8211833 flops
+Time of   207-relation= 0.166580 sec= 30045845 flops
+Time of   208-relation= 0.175555 sec= 31664737 flops
+Time of   209-relation= 0.050469 sec=  9103108 flops
+Time of   210-relation= 0.053840 sec=  9711055 flops
+Time of   211-relation= 0.318245 sec= 57401566 flops
+Time of   212-relation= 0.104950 sec= 18929662 flops
+Time of   213-relation= 0.175658 sec= 31683232 flops
+Time of   214-relation= 0.206017 sec= 37159000 flops
+Time of   215-relation= 0.722193 sec= 130261146 flops
+Time of   216-relation= 0.380690 sec= 68664701 flops
+Time of   217-relation= 0.057800 sec= 10425267 flops
+Time of   218-relation= 0.956473 sec= 172517975 flops
+Time of   219-relation= 0.871948 sec= 157272311 flops
+Time of   220-relation= 0.049753 sec=  8973892 flops
+Time of   221-relation= 0.472674 sec= 85255675 flops
+Time of   222-relation= 0.505499 sec= 91176272 flops
+Time of   223-relation= 0.345719 sec= 62356947 flops
+Time of   224-relation= 0.541729 sec= 97711159 flops
+Time of   225-relation= 0.273184 sec= 49273884 flops
+Time of   226-relation= 0.430056 sec= 77568700 flops
+Time of   227-relation= 0.505233 sec= 91128281 flops
+Time of   228-relation= 0.415178 sec= 74885318 flops
+Time of   229-relation= 0.439754 sec= 79318002 flops
+Time of   230-relation= 0.049691 sec=  8962781 flops
+Time of   231-relation= 0.057372 sec= 10348139 flops
+Time of   232-relation= 0.420640 sec= 75870477 flops
+Time of   233-relation= 0.052248 sec=  9423906 flops
+Time of   234-relation= 0.272675 sec= 49182181 flops
+Time of   235-relation= 0.148628 sec= 26807941 flops
+Time of   236-relation= 0.404376 sec= 72936947 flops
+Time of   237-relation= 0.563810 sec= 101693875 flops
+Time of   238-relation= 0.220432 sec= 39759117 flops
+Time of   239-relation= 0.057512 sec= 10373434 flops
+Time of   240-relation= 0.152724 sec= 27546744 flops
+Time of   241-relation= 0.048441 sec=  8737224 flops
+Time of   242-relation= 0.308292 sec= 55606298 flops
+Time of   243-relation= 0.052381 sec=  9447846 flops
+Time of   244-relation= 0.303349 sec= 54714701 flops
+Time of   245-relation= 0.049599 sec=  8946039 flops
+Time of   246-relation= 0.057106 sec= 10300113 flops
+Time of   247-relation= 0.339756 sec= 61281475 flops
+Time of   248-relation= 0.340836 sec= 61476265 flops
+Time of   249-relation= 0.110783 sec= 19981887 flops
+Time of   250-relation= 0.226844 sec= 40915705 flops
+Time of   251-relation= 0.360007 sec= 64934152 flops
+Time of   252-relation= 0.174215 sec= 31423068 flops
+Time of   253-relation= 0.115926 sec= 20909475 flops
+Time of   254-relation= 0.045707 sec=  8244038 flops
+Time of   255-relation= 0.250151 sec= 45119460 flops
+Time of   256-relation= 0.109130 sec= 19683723 flops
+size of double = 8 bytes
+Range h=0 to p   : g= -287359.0, l= 151755440.2
+Range h=p to HMAX: g= -434699.4, l= 145355972.6
+The bottom line for this BSP computer is:
+p= 128, r= 180.369 Mflop/s, g= -434699.4, l= 145355972.6
+
+### Summarized output of "llq -l -x -j p6012.huygens.sara.nl.264296.0" invoked on p6071 ###
+        Job Step Id: p6012.huygens.sara.nl.264296.0
+           Job Name: p6012.huygens.sara.nl.264296
+          Step Name: 0
+  Structure Version: 10
+              Owner: bissstud
+         Queue Date: Wed Oct  6 16:04:02 2010
+             Status: Running
+          Recurring: False
+      Dispatch Time: Wed Oct  6 16:04:25 2010
+    Completion Date: Wed Oct  6 19:59:47 CEST 2010 (i.e. time of job epilog invocation)
+        Favored Job: No
+      Notifications: Never
+ Virtual Image Size: 1 kb
+         Large Page: N
+         Coschedule: no
+       SMT required: as_is
+    MetaCluster Job: no
+     Checkpointable: no
+   Ckpt Elapse Time: 0 seconds
+    Ckpt Accum Time: 0 seconds
+  Restart From Ckpt: no
+ Restart Same Nodes: no
+            Restart: yes
+        Preemptable: yes
+ Preempt Wait Count: 0
+     User Hold Time: 00:00:00 (0 seconds)
+               RSet: RSET_MCM_AFFINITY
+Mcm Affinity Option: MCM_DISTRIBUTE MCM_MEM_PREF MCM_SNI_NONE
+      Task Affinity: cpu(1)
+      Cpus Per Core:  0
+   Parallel Threads:  0
+                 In: /dev/null
+                Out: out-128proc.264296
+                Err: err-128proc.264296
+Initial Working Dir: /gpfs/h05/bissstud/Students10/pdwalt/eratosthenes/bench
+          Resources: ConsumableMemory(2.000 gb)
+          Step Type: General Parallel
+         Node Usage: not_shared
+    Submitting Host: p6012.huygens.sara.nl
+        Schedd Host: p6012.huygens.sara.nl
+      Job Queue Key: 264296
+        Notify User: bissstud@p6012.huygens.sara.nl
+              Shell: /bin/bash
+  LoadLeveler Group: No_Group
+              Class: normal
+    Ckpt Hard Limit: undefined
+    Ckpt Soft Limit: undefined
+     Cpu Hard Limit: unlimited
+     Cpu Soft Limit: unlimited
+    Data Hard Limit: undefined
+    Data Soft Limit: undefined
+      As Hard Limit: undefined
+      As Soft Limit: undefined
+   Nproc Hard Limit: undefined
+   Nproc Soft Limit: undefined
+ Memlock Hard Limit: undefined
+ Memlock Soft Limit: undefined
+   Locks Hard Limit: undefined
+   Locks Soft Limit: undefined
+  Nofile Hard Limit: undefined
+  Nofile Soft Limit: undefined
+    Core Hard Limit: unlimited
+    Core Soft Limit: 0 bytes
+    File Hard Limit: undefined
+    File Soft Limit: undefined
+   Stack Hard Limit: unlimited
+   Stack Soft Limit: unlimited
+     Rss Hard Limit: undefined
+     Rss Soft Limit: undefined
+Step Cpu Hard Limit: unlimited
+Step Cpu Soft Limit: unlimited
+Wall Clk Hard Limit: 08:20:00 (30000 seconds)
+Wall Clk Soft Limit: 08:20:00 (30000 seconds)
+         Unix Group: bissstud
+ User Space Windows: 0
+      Bulk Transfer: No
+Step Adapter Memory: 0 bytes
+          Step Cpus: 0
+Step Virtual Memory: 0.000 mb
+   Step Real Memory: 256.000 gb
+Step Large Page Mem: 0.000 mb
+       Running Host: p6071.huygens.sara.nl
+      Machine Speed: 1.000000
+  Starter User Time: 00:00:00.370000
+Starter System Time: 00:00:00.170000
+ Starter Total Time: 00:00:00.540000
+     Starter maxrss: 0
+      Starter ixrss: 0
+      Starter idrss: 0
+      Starter isrss: 0
+     Starter minflt: 1257
+     Starter majflt: 2
+      Starter nswap: 0
+    Starter inblock: 0
+    Starter oublock: 0
+     Starter msgsnd: 0
+     Starter msgrcv: 0
+   Starter nsignals: 0
+      Starter nvcsw: 0
+     Starter nivcsw: 0
+     Step User Time: 1+21:43:09.540000
+   Step System Time: 8+00:29:14.050000
+    Step Total Time: 9+22:12:23.590000
+        Step maxrss: 0
+         Step ixrss: 0
+         Step idrss: 0
+         Step isrss: 0
+        Step minflt: 280755
+        Step majflt: 6
+         Step nswap: 0
+       Step inblock: 0
+       Step oublock: 0
+        Step msgsnd: 0
+        Step msgrcv: 0
+      Step nsignals: 0
+         Step nvcsw: 0
+        Step nivcsw: 0
+     Cluster Option: none
+--------------------------------------------------------------------------------
+Node
+----
+
+   Name            : 
+   Requirements    : 
+   Preferences     : 
+   Node minimum    : 2
+   Node maximum    : 2
+   Node actual     : 2
+   Allocated Hosts : p6071.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0 >,MCM1:CPU< 16 >,MCM2:CPU< 32 >,MCM3:CPU< 48 >,MCM0:CPU< 1 >,MCM1:CPU< 17 >,MCM2:CPU< 33 >,MCM3:CPU< 49 >,MCM0:CPU< 2 >,MCM1:CPU< 18 >,MCM2:CPU< 34 >,MCM3:CPU< 50 >,MCM0:CPU< 3 >,MCM1:CPU< 19 >,MCM2:CPU< 35 >,MCM3:CPU< 51 >,MCM0:CPU< 4 >,MCM1:CPU< 20 >,MCM2:CPU< 36 >,MCM3:CPU< 52 >,MCM0:CPU< 5 >,MCM1:CPU< 21 >,MCM2:CPU< 37 >,MCM3:CPU< 53 >,MCM0:CPU< 6 >,MCM1:CPU< 22 >,MCM2:CPU< 38 >,MCM3:CPU< 54 >,MCM0:CPU< 7 >,MCM1:CPU< 23 >,MCM2:CPU< 39 >,MCM3:CPU< 55 >,MCM0:CPU< 8 >,MCM1:CPU< 24 >,MCM2:CPU< 40 >,MCM3:CPU< 56 >,MCM0:CPU< 9 >,MCM1:CPU< 25 >,MCM2:CPU< 41 >,MCM3:CPU< 57 >,MCM0:CPU< 10 >,MCM1:CPU< 26 >,MCM2:CPU< 42 >,MCM3:CPU< 58 >,MCM0:CPU< 11 >,MCM1:CPU< 27 >,MCM2:CPU< 43 >,MCM3:CPU< 59 >,MCM0:CPU< 12 >,MCM1:CPU< 28 >,MCM2:CPU< 44 >,MCM3:CPU< 60 >,MCM0:CPU< 13 >,MCM1:CPU< 29 >,MCM2:CPU< 45 >,MCM3:CPU< 61 >,MCM0:CPU< 14 >,MCM1:CPU< 30 >,MCM2:CPU< 46 >,MCM3:CPU< 62 >,MCM0:CPU< 15 >,MCM1:CPU< 31 >,MCM2:CPU< 47 >,MCM3:CPU< 63 >
+                   + p6081.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0 >,MCM1:CPU< 16 >,MCM2:CPU< 32 >,MCM3:CPU< 48 >,MCM0:CPU< 1 >,MCM1:CPU< 17 >,MCM2:CPU< 33 >,MCM3:CPU< 49 >,MCM0:CPU< 2 >,MCM1:CPU< 18 >,MCM2:CPU< 34 >,MCM3:CPU< 50 >,MCM0:CPU< 3 >,MCM1:CPU< 19 >,MCM2:CPU< 35 >,MCM3:CPU< 51 >,MCM0:CPU< 4 >,MCM1:CPU< 20 >,MCM2:CPU< 36 >,MCM3:CPU< 52 >,MCM0:CPU< 5 >,MCM1:CPU< 21 >,MCM2:CPU< 37 >,MCM3:CPU< 53 >,MCM0:CPU< 6 >,MCM1:CPU< 22 >,MCM2:CPU< 38 >,MCM3:CPU< 54 >,MCM0:CPU< 7 >,MCM1:CPU< 23 >,MCM2:CPU< 39 >,MCM3:CPU< 55 >,MCM0:CPU< 8 >,MCM1:CPU< 24 >,MCM2:CPU< 40 >,MCM3:CPU< 56 >,MCM0:CPU< 9 >,MCM1:CPU< 25 >,MCM2:CPU< 41 >,MCM3:CPU< 57 >,MCM0:CPU< 10 >,MCM1:CPU< 26 >,MCM2:CPU< 42 >,MCM3:CPU< 58 >,MCM0:CPU< 11 >,MCM1:CPU< 27 >,MCM2:CPU< 43 >,MCM3:CPU< 59 >,MCM0:CPU< 12 >,MCM1:CPU< 28 >,MCM2:CPU< 44 >,MCM3:CPU< 60 >,MCM0:CPU< 13 >,MCM1:CPU< 29 >,MCM2:CPU< 45 >,MCM3:CPU< 61 >,MCM0:CPU< 14 >,MCM1:CPU< 30 >,MCM2:CPU< 46 >,MCM3:CPU< 62 >,MCM0:CPU< 15 >,MCM1:CPU< 31 >,MCM2:CPU< 47 >,MCM3:CPU< 63 >
+
+   Master Task
+   -----------
+
+      Executable   : /home/bissstud/Students10/pdwalt/eratosthenes/bench/jobscript-bench
+      Exec Args    : 
+      Num Task Inst: 1
+      Task Instance: p6071:-1,
+
+   Task
+   ----
+
+      Num Task Inst: 128
+      Task Instance: p6071:0:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0 >
+      Task Instance: p6071:1:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16 >
+      Task Instance: p6071:2:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 32 >
+      Task Instance: p6071:3:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 48 >
+      Task Instance: p6071:4:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 1 >
+      Task Instance: p6071:5:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 17 >
+      Task Instance: p6071:6:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 33 >
+      Task Instance: p6071:7:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 49 >
+      Task Instance: p6071:8:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 2 >
+      Task Instance: p6071:9:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 18 >
+      Task Instance: p6071:10:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 34 >
+      Task Instance: p6071:11:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 50 >
+      Task Instance: p6071:12:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 3 >
+      Task Instance: p6071:13:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 19 >
+      Task Instance: p6071:14:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 35 >
+      Task Instance: p6071:15:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 51 >
+      Task Instance: p6071:16:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 4 >
+      Task Instance: p6071:17:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 20 >
+      Task Instance: p6071:18:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 36 >
+      Task Instance: p6071:19:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 52 >
+      Task Instance: p6071:20:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 5 >
+      Task Instance: p6071:21:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 21 >
+      Task Instance: p6071:22:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 37 >
+      Task Instance: p6071:23:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 53 >
+      Task Instance: p6071:24:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 6 >
+      Task Instance: p6071:25:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 22 >
+      Task Instance: p6071:26:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 38 >
+      Task Instance: p6071:27:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 54 >
+      Task Instance: p6071:28:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 7 >
+      Task Instance: p6071:29:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 23 >
+      Task Instance: p6071:30:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 39 >
+      Task Instance: p6071:31:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 55 >
+      Task Instance: p6071:32:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 8 >
+      Task Instance: p6071:33:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 24 >
+      Task Instance: p6071:34:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 40 >
+      Task Instance: p6071:35:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 56 >
+      Task Instance: p6071:36:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 9 >
+      Task Instance: p6071:37:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 25 >
+      Task Instance: p6071:38:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 41 >
+      Task Instance: p6071:39:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 57 >
+      Task Instance: p6071:40:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 10 >
+      Task Instance: p6071:41:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 26 >
+      Task Instance: p6071:42:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 42 >
+      Task Instance: p6071:43:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 58 >
+      Task Instance: p6071:44:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 11 >
+      Task Instance: p6071:45:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 27 >
+      Task Instance: p6071:46:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 43 >
+      Task Instance: p6071:47:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 59 >
+      Task Instance: p6071:48:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 12 >
+      Task Instance: p6071:49:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 28 >
+      Task Instance: p6071:50:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 44 >
+      Task Instance: p6071:51:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 60 >
+      Task Instance: p6071:52:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 13 >
+      Task Instance: p6071:53:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 29 >
+      Task Instance: p6071:54:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 45 >
+      Task Instance: p6071:55:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 61 >
+      Task Instance: p6071:56:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 14 >
+      Task Instance: p6071:57:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 30 >
+      Task Instance: p6071:58:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 46 >
+      Task Instance: p6071:59:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 62 >
+      Task Instance: p6071:60:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 15 >
+      Task Instance: p6071:61:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 31 >
+      Task Instance: p6071:62:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 47 >
+      Task Instance: p6071:63:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 63 >
+      Task Instance: p6081:64:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0 >
+      Task Instance: p6081:65:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16 >
+      Task Instance: p6081:66:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 32 >
+      Task Instance: p6081:67:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 48 >
+      Task Instance: p6081:68:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 1 >
+      Task Instance: p6081:69:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 17 >
+      Task Instance: p6081:70:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 33 >
+      Task Instance: p6081:71:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 49 >
+      Task Instance: p6081:72:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 2 >
+      Task Instance: p6081:73:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 18 >
+      Task Instance: p6081:74:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 34 >
+      Task Instance: p6081:75:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 50 >
+      Task Instance: p6081:76:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 3 >
+      Task Instance: p6081:77:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 19 >
+      Task Instance: p6081:78:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 35 >
+      Task Instance: p6081:79:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 51 >
+      Task Instance: p6081:80:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 4 >
+      Task Instance: p6081:81:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 20 >
+      Task Instance: p6081:82:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 36 >
+      Task Instance: p6081:83:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 52 >
+      Task Instance: p6081:84:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 5 >
+      Task Instance: p6081:85:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 21 >
+      Task Instance: p6081:86:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 37 >
+      Task Instance: p6081:87:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 53 >
+      Task Instance: p6081:88:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 6 >
+      Task Instance: p6081:89:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 22 >
+      Task Instance: p6081:90:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 38 >
+      Task Instance: p6081:91:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 54 >
+      Task Instance: p6081:92:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 7 >
+      Task Instance: p6081:93:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 23 >
+      Task Instance: p6081:94:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 39 >
+      Task Instance: p6081:95:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 55 >
+      Task Instance: p6081:96:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 8 >
+      Task Instance: p6081:97:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 24 >
+      Task Instance: p6081:98:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 40 >
+      Task Instance: p6081:99:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 56 >
+      Task Instance: p6081:100:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 9 >
+      Task Instance: p6081:101:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 25 >
+      Task Instance: p6081:102:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 41 >
+      Task Instance: p6081:103:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 57 >
+      Task Instance: p6081:104:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 10 >
+      Task Instance: p6081:105:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 26 >
+      Task Instance: p6081:106:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 42 >
+      Task Instance: p6081:107:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 58 >
+      Task Instance: p6081:108:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 11 >
+      Task Instance: p6081:109:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 27 >
+      Task Instance: p6081:110:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 43 >
+      Task Instance: p6081:111:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 59 >
+      Task Instance: p6081:112:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 12 >
+      Task Instance: p6081:113:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 28 >
+      Task Instance: p6081:114:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 44 >
+      Task Instance: p6081:115:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 60 >
+      Task Instance: p6081:116:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 13 >
+      Task Instance: p6081:117:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 29 >
+      Task Instance: p6081:118:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 45 >
+      Task Instance: p6081:119:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 61 >
+      Task Instance: p6081:120:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 14 >
+      Task Instance: p6081:121:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 30 >
+      Task Instance: p6081:122:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 46 >
+      Task Instance: p6081:123:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 62 >
+      Task Instance: p6081:124:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 15 >
+      Task Instance: p6081:125:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 31 >
+      Task Instance: p6081:126:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 47 >
+      Task Instance: p6081:127:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 63 >
+--------------------------------------------------------------------------------
+Job Step Status on Allocated Hosts 
+----------------------------------
+
+    p6071.huygens.sara.nl:RUNNING
+    p6081.huygens.sara.nl:RUNNING
+
+### End of summarized "llq" output ###
