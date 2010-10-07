@@ -41,6 +41,8 @@ int localIdx(int p, int s, int n, int global)
 }
 int blockLow(int p, int s, int n)
 {
+ if(s*n < 0) 
+         printf("Hm. s*n < 0: s=%d, n=%d, s*n=%d\n", s,n,s*n);      
     return (s*n)/p; //implicit floor
 }
 
@@ -122,7 +124,7 @@ void bspsieve(){
     double alpha, time0, time1;
     int *x;
     int *ks; //place for proc0 to store intermediate k's
-    int p, s, n, nl, i, iglob;
+    unsigned int p, s, n, nl, i, iglob;
     int k;   // the current largest sure-prime
 
     n = N+1; // copy global N and increase by 1. (only proc 1 knows this)
@@ -145,7 +147,7 @@ void bspsieve(){
     bsp_pop_reg(&n);
 
     nl= blockSize(p,s,n); // how big must s's block be?
-    printf("Try to alloc vec of %d ints = %d bytes\n", nl, nl*SZINT);
+    printf("P(%d) tries to alloc vec of %d ints = %d bytes\n",s,  nl, nl*SZINT);
     x= vecalloci(nl);
 
     for (i=0; i<nl; i++){
