@@ -62,7 +62,7 @@ void printPrimes(int N, enum bool* A)
     for(i = 0; i < N; i++)
         if(A[i] == true)
         {
-            printf("prime: %d\n", i);
+         //   printf("prime: %d\n", i);
             nPrimes++;
         }
 
