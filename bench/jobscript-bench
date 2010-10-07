@@ -1,11 +1,11 @@
 # @ node = 2
 #
-# @ tasks_per_node = 64
+# @ tasks_per_node = 1
 # @ notification = never
 # @ input = /dev/null
-# @ output = out-128proc.$(jobid)
-# @ error = err-128proc.$(jobid)
-# @ wall_clock_limit = 200:00
+# @ output = out-dist2proc.$(jobid)
+# @ error = err-dist2proc.$(jobid)
+# @ wall_clock_limit = 500:00
 # @ job_type = parallel
 #
 # @ queue
