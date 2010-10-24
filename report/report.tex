@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article}
 
+\usepackage{lgrind}
 \usepackage{graphicx}
 \usepackage{hyperref}
 
@@ -22,8 +23,12 @@
 \section{Prime Sieve}
 
 \appendix
-\section{Sequential sieve}
+\section{Sequential sieve code}
 
-\section{Parallel sieve}
+\lgrindfile{../seq/sieve.lg}
+
+\section{Parallel sieve code}
+
+\lgrindfile{../par/bspsieve.lg}
 
 \end{document}
