@@ -12,6 +12,8 @@ par: force-look
 seq: force-look
 	(cd seq; make all)
 
+report: force-look
+	(cd report; make all)
 bench: force-look
 	(cd bench; make all)
 
