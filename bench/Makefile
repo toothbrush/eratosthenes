@@ -1,4 +1,4 @@
-CC= mpcc
+CC= mpicc
 #CFLAGS= -O3 
 CFLAGS= -lbsponmpi
 LFLAGS= -lm #-Wl,-rpath -Wl,LIBDIR
