@@ -1,0 +1,408 @@
+max prime requested = 4000000
+Using 64 processors. 
+P(0) tries to alloc vec of 62500 ints = 250000 bytes
+P(41) tries to alloc vec of 62500 ints = 250000 bytes
+P(43) tries to alloc vec of 62500 ints = 250000 bytes
+P(45) tries to alloc vec of 62500 ints = 250000 bytes
+P(47) tries to alloc vec of 62500 ints = 250000 bytes
+P(49) tries to alloc vec of 62500 ints = 250000 bytes
+P(51) tries to alloc vec of 62500 ints = 250000 bytes
+P(53) tries to alloc vec of 62500 ints = 250000 bytes
+P(55) tries to alloc vec of 62500 ints = 250000 bytes
+P(57) tries to alloc vec of 62500 ints = 250000 bytes
+P(59) tries to alloc vec of 62500 ints = 250000 bytes
+P(1) tries to alloc vec of 62500 ints = 250000 bytes
+P(2) tries to alloc vec of 62500 ints = 250000 bytes
+P(4) tries to alloc vec of 62500 ints = 250000 bytes
+P(61) tries to alloc vec of 62500 ints = 250000 bytes
+P(63) tries to alloc vec of 62501 ints = 250004 bytes
+P(6) tries to alloc vec of 62500 ints = 250000 bytes
+P(8) tries to alloc vec of 62500 ints = 250000 bytes
+P(10) tries to alloc vec of 62500 ints = 250000 bytes
+P(12) tries to alloc vec of 62500 ints = 250000 bytes
+P(14) tries to alloc vec of 62500 ints = 250000 bytes
+P(16) tries to alloc vec of 62500 ints = 250000 bytes
+P(18) tries to alloc vec of 62500 ints = 250000 bytes
+P(20) tries to alloc vec of 62500 ints = 250000 bytes
+P(22) tries to alloc vec of 62500 ints = 250000 bytes
+P(24) tries to alloc vec of 62500 ints = 250000 bytes
+P(26) tries to alloc vec of 62500 ints = 250000 bytes
+P(28) tries to alloc vec of 62500 ints = 250000 bytes
+P(30) tries to alloc vec of 62500 ints = 250000 bytes
+P(32) tries to alloc vec of 62500 ints = 250000 bytes
+P(35) tries to alloc vec of 62500 ints = 250000 bytes
+P(37) tries to alloc vec of 62500 ints = 250000 bytes
+P(39) tries to alloc vec of 62500 ints = 250000 bytes
+P(40) tries to alloc vec of 62500 ints = 250000 bytes
+P(42) tries to alloc vec of 62500 ints = 250000 bytes
+P(44) tries to alloc vec of 62500 ints = 250000 bytes
+P(46) tries to alloc vec of 62500 ints = 250000 bytes
+P(48) tries to alloc vec of 62500 ints = 250000 bytes
+P(50) tries to alloc vec of 62500 ints = 250000 bytes
+P(52) tries to alloc vec of 62500 ints = 250000 bytes
+P(54) tries to alloc vec of 62500 ints = 250000 bytes
+P(56) tries to alloc vec of 62500 ints = 250000 bytes
+P(58) tries to alloc vec of 62500 ints = 250000 bytes
+P(3) tries to alloc vec of 62500 ints = 250000 bytes
+P(5) tries to alloc vec of 62500 ints = 250000 bytes
+P(60) tries to alloc vec of 62500 ints = 250000 bytes
+P(62) tries to alloc vec of 62500 ints = 250000 bytes
+P(7) tries to alloc vec of 62500 ints = 250000 bytes
+P(9) tries to alloc vec of 62500 ints = 250000 bytes
+P(11) tries to alloc vec of 62500 ints = 250000 bytes
+P(13) tries to alloc vec of 62500 ints = 250000 bytes
+P(15) tries to alloc vec of 62500 ints = 250000 bytes
+P(17) tries to alloc vec of 62500 ints = 250000 bytes
+P(19) tries to alloc vec of 62500 ints = 250000 bytes
+P(21) tries to alloc vec of 62500 ints = 250000 bytes
+P(23) tries to alloc vec of 62500 ints = 250000 bytes
+P(25) tries to alloc vec of 62500 ints = 250000 bytes
+P(27) tries to alloc vec of 62500 ints = 250000 bytes
+P(29) tries to alloc vec of 62500 ints = 250000 bytes
+P(31) tries to alloc vec of 62500 ints = 250000 bytes
+P(33) tries to alloc vec of 62500 ints = 250000 bytes
+P(34) tries to alloc vec of 62500 ints = 250000 bytes
+P(36) tries to alloc vec of 62500 ints = 250000 bytes
+P(38) tries to alloc vec of 62500 ints = 250000 bytes
+proc 0 finds 6275 primes.
+This took only 3.413085 seconds.
+proc 41 finds 4247 primes.
+proc 42 finds 4227 primes.
+proc 45 finds 4218 primes.
+proc 47 finds 4188 primes.
+proc 49 finds 4204 primes.
+proc 51 finds 4223 primes.
+proc 53 finds 4129 primes.
+proc 55 finds 4083 primes.
+proc 57 finds 4206 primes.
+proc 59 finds 4160 primes.
+proc 1 finds 5459 primes.
+proc 2 finds 5230 primes.
+proc 4 finds 4948 primes.
+proc 61 finds 4134 primes.
+proc 63 finds 4066 primes.
+proc 6 finds 4852 primes.
+proc 8 finds 4719 primes.
+proc 10 finds 4640 primes.
+proc 12 finds 4635 primes.
+proc 14 finds 4558 primes.
+proc 16 finds 4501 primes.
+proc 18 finds 4520 primes.
+proc 20 finds 4440 primes.
+proc 22 finds 4439 primes.
+proc 24 finds 4384 primes.
+proc 26 finds 4377 primes.
+proc 28 finds 4338 primes.
+proc 30 finds 4338 primes.
+proc 32 finds 4308 primes.
+proc 35 finds 4259 primes.
+proc 37 finds 4213 primes.
+proc 39 finds 4246 primes.
+proc 40 finds 4238 primes.
+proc 43 finds 4209 primes.
+proc 44 finds 4238 primes.
+proc 46 finds 4179 primes.
+proc 48 finds 4155 primes.
+proc 50 finds 4179 primes.
+proc 52 finds 4161 primes.
+proc 54 finds 4200 primes.
+proc 56 finds 4084 primes.
+proc 58 finds 4117 primes.
+proc 3 finds 5080 primes.
+proc 5 finds 4912 primes.
+proc 60 finds 4095 primes.
+proc 62 finds 4134 primes.
+proc 7 finds 4782 primes.
+proc 9 finds 4729 primes.
+proc 11 finds 4612 primes.
+proc 13 finds 4575 primes.
+proc 15 finds 4492 primes.
+proc 17 finds 4520 primes.
+proc 19 finds 4430 primes.
+proc 21 finds 4404 primes.
+proc 23 finds 4403 primes.
+proc 25 finds 4346 primes.
+proc 27 finds 4346 primes.
+proc 29 finds 4345 primes.
+proc 31 finds 4304 primes.
+proc 33 finds 4280 primes.
+proc 34 finds 4301 primes.
+proc 36 finds 4284 primes.
+proc 38 finds 4248 primes.
+
+### Summarized output of "llq -l -x -j p6012.huygens.sara.nl.264501.0" invoked on p6057 ###
+        Job Step Id: p6012.huygens.sara.nl.264501.0
+           Job Name: p6012.huygens.sara.nl.264501
+          Step Name: 0
+  Structure Version: 10
+              Owner: bissstud
+         Queue Date: Thu Oct  7 13:00:02 2010
+             Status: Running
+          Recurring: False
+      Dispatch Time: Thu Oct  7 13:00:30 2010
+    Completion Date: Thu Oct  7 13:00:53 CEST 2010 (i.e. time of job epilog invocation)
+        Favored Job: No
+      Notifications: Never
+ Virtual Image Size: 1 kb
+         Large Page: N
+         Coschedule: no
+       SMT required: as_is
+    MetaCluster Job: no
+     Checkpointable: no
+   Ckpt Elapse Time: 0 seconds
+    Ckpt Accum Time: 0 seconds
+  Restart From Ckpt: no
+ Restart Same Nodes: no
+            Restart: yes
+        Preemptable: yes
+ Preempt Wait Count: 0
+     User Hold Time: 00:00:00 (0 seconds)
+               RSet: RSET_MCM_AFFINITY
+Mcm Affinity Option: MCM_DISTRIBUTE MCM_MEM_PREF MCM_SNI_NONE
+      Task Affinity: core(1)
+      Cpus Per Core:  0
+   Parallel Threads:  0
+                 In: /dev/null
+                Out: out-parsieve.264501
+                Err: err-parsieve.264501
+Initial Working Dir: /gpfs/h05/bissstud/Students10/pdwalt/eratosthenes/par
+          Resources: ConsumableMemory(6.836 gb)
+          Step Type: General Parallel
+         Node Usage: not_shared
+    Submitting Host: p6012.huygens.sara.nl
+        Schedd Host: p6012.huygens.sara.nl
+      Job Queue Key: 264501
+        Notify User: bissstud@p6012.huygens.sara.nl
+              Shell: /bin/bash
+  LoadLeveler Group: No_Group
+              Class: normal
+    Ckpt Hard Limit: undefined
+    Ckpt Soft Limit: undefined
+     Cpu Hard Limit: unlimited
+     Cpu Soft Limit: unlimited
+    Data Hard Limit: undefined
+    Data Soft Limit: undefined
+      As Hard Limit: undefined
+      As Soft Limit: undefined
+   Nproc Hard Limit: undefined
+   Nproc Soft Limit: undefined
+ Memlock Hard Limit: undefined
+ Memlock Soft Limit: undefined
+   Locks Hard Limit: undefined
+   Locks Soft Limit: undefined
+  Nofile Hard Limit: undefined
+  Nofile Soft Limit: undefined
+    Core Hard Limit: unlimited
+    Core Soft Limit: 0 bytes
+    File Hard Limit: undefined
+    File Soft Limit: undefined
+   Stack Hard Limit: unlimited
+   Stack Soft Limit: unlimited
+     Rss Hard Limit: undefined
+     Rss Soft Limit: undefined
+Step Cpu Hard Limit: unlimited
+Step Cpu Soft Limit: unlimited
+Wall Clk Hard Limit: 01:40:00 (6000 seconds)
+Wall Clk Soft Limit: 01:40:00 (6000 seconds)
+         Unix Group: bissstud
+ User Space Windows: 0
+      Bulk Transfer: No
+Step Adapter Memory: 0 bytes
+          Step Cpus: 0
+Step Virtual Memory: 0.000 mb
+   Step Real Memory: 437.500 gb
+Step Large Page Mem: 0.000 mb
+       Running Host: p6057.huygens.sara.nl
+      Machine Speed: 1.000000
+  Starter User Time: 00:00:00.000000
+Starter System Time: 00:00:00.000000
+ Starter Total Time: 00:00:00.000000
+     Starter maxrss: 0
+      Starter ixrss: 0
+      Starter idrss: 0
+      Starter isrss: 0
+     Starter minflt: 0
+     Starter majflt: 0
+      Starter nswap: 0
+    Starter inblock: 0
+    Starter oublock: 0
+     Starter msgsnd: 0
+     Starter msgrcv: 0
+   Starter nsignals: 0
+      Starter nvcsw: 0
+     Starter nivcsw: 0
+     Step User Time: 00:00:00.000000
+   Step System Time: 00:00:00.000000
+    Step Total Time: 00:00:00.000000
+        Step maxrss: 0
+         Step ixrss: 0
+         Step idrss: 0
+         Step isrss: 0
+        Step minflt: 0
+        Step majflt: 0
+         Step nswap: 0
+       Step inblock: 0
+       Step oublock: 0
+        Step msgsnd: 0
+        Step msgrcv: 0
+      Step nsignals: 0
+         Step nvcsw: 0
+        Step nivcsw: 0
+     Cluster Option: none
+--------------------------------------------------------------------------------
+Node
+----
+
+   Name            : 
+   Requirements    : 
+   Preferences     : 
+   Node minimum    : 32
+   Node maximum    : 32
+   Node actual     : 32
+   Allocated Hosts : p6057.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6059.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6060.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6063.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6065.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6071.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6089.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6090.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6091.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6092.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6093.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6094.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6095.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6096.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6099.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6100.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6101.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6102.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6103.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6104.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6001.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6002.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6013.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6014.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6025.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6026.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6037.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6038.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6049.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6050.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6061.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+                   + p6062.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >
+
+   Master Task
+   -----------
+
+      Executable   : /home/bissstud/Students10/pdwalt/eratosthenes/par/jobscript-sieve
+      Exec Args    : 
+      Num Task Inst: 1
+      Task Instance: p6057:-1,
+
+   Task
+   ----
+
+      Num Task Inst: 64
+      Task Instance: p6057:0:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6057:1:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6059:2:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6059:3:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6060:4:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6060:5:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6063:6:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6063:7:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6065:8:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6065:9:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6071:10:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6071:11:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6089:12:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6089:13:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6090:14:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6090:15:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6091:16:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6091:17:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6092:18:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6092:19:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6093:20:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6093:21:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6094:22:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6094:23:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6095:24:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6095:25:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6096:26:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6096:27:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6099:28:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6099:29:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6100:30:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6100:31:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6101:32:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6101:33:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6102:34:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6102:35:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6103:36:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6103:37:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6104:38:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6104:39:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6001:40:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6001:41:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6002:42:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6002:43:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6013:44:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6013:45:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6014:46:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6014:47:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6025:48:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6025:49:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6026:50:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6026:51:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6037:52:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6037:53:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6038:54:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6038:55:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6049:56:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6049:57:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6050:58:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6050:59:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6061:60:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6061:61:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6062:62:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6062:63:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+--------------------------------------------------------------------------------
+Job Step Status on Allocated Hosts 
+----------------------------------
+
+    p6057.huygens.sara.nl:RUNNING
+    p6059.huygens.sara.nl:RUNNING
+    p6063.huygens.sara.nl:RUNNING
+    p6090.huygens.sara.nl:RUNNING
+    p6100.huygens.sara.nl:RUNNING
+    p6062.huygens.sara.nl:RUNNING
+    p6014.huygens.sara.nl:RUNNING
+    p6094.huygens.sara.nl:RUNNING
+    p6104.huygens.sara.nl:RUNNING
+    p6038.huygens.sara.nl:RUNNING
+    p6071.huygens.sara.nl:RUNNING
+    p6092.huygens.sara.nl:RUNNING
+    p6102.huygens.sara.nl:RUNNING
+    p6026.huygens.sara.nl:RUNNING
+    p6096.huygens.sara.nl:RUNNING
+    p6002.huygens.sara.nl:RUNNING
+    p6050.huygens.sara.nl:RUNNING
+    p6060.huygens.sara.nl:RUNNING
+    p6065.huygens.sara.nl:RUNNING
+    p6091.huygens.sara.nl:RUNNING
+    p6101.huygens.sara.nl:RUNNING
+    p6025.huygens.sara.nl:RUNNING
+    p6095.huygens.sara.nl:RUNNING
+    p6001.huygens.sara.nl:RUNNING
+    p6049.huygens.sara.nl:RUNNING
+    p6089.huygens.sara.nl:RUNNING
+    p6093.huygens.sara.nl:RUNNING
+    p6103.huygens.sara.nl:RUNNING
+    p6037.huygens.sara.nl:RUNNING
+    p6099.huygens.sara.nl:RUNNING
+    p6013.huygens.sara.nl:RUNNING
+    p6061.huygens.sara.nl:RUNNING
+
+### End of summarized "llq" output ###
