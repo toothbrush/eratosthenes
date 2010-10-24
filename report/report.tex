@@ -11,12 +11,24 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-    Paper detailing findings w.r.t. performance of Huygens as opposed to laptop
-    as well as description of parallel primes sieve implementation. 
+    In this report the findings are presented after benchmarking the Dutch
+    supercomputer Huygens and a personal computer. The Sieve of Eratosthenes is
+    then implemented in sequence and parallel (including a number of performance
+    improvements), and tested on Huygens and a
+    personal computer. 
 \end{abstract}
 \tableofcontents
 
 \section{Introduction}
+
+The so-called sieve of Eratosthenes is an old and unsophisticated method for
+finding all primes up to a given number $N$, which lends itself quite nicely to
+parallelisation. The idea is roughly as follows: start with the lowest known
+prime $i$ (given: $i \leftarrow 2$ in the first iteration) and cross all
+multiples of $i$ out of your list of potential primes, which starts off with all
+natural numbers 1\ldots$N$. While $i$ is less than $N$, repeat. The next lowest
+known prime is the smallest number which hasn't been crossed off the list yet.
+More information about Eratosthenes' prime sieve can be found in 
 
 \section{Benchmarks}
 
@@ -30,5 +42,11 @@
 \section{Parallel sieve code}
 
 \lgrindfile{../par/bspsieve.lg}
+
+
+\begin{thebibliography}{99}
+    \bibitem[SPIN]{SPIN} \url{http://www.spinroot.com}, homepage of the SPIN
+        automatic model checker. 
+\end{thebibliography}
 
 \end{document}
