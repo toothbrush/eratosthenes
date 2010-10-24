@@ -1,1 +1,6 @@
 .report.tex.swp
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
