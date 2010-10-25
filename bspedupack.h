@@ -21,9 +21,13 @@
 #define MAX(a,b) ((a)>(b) ? (a) : (b))
 #define MIN(a,b) ((a)<(b) ? (a) : (b))
 
+#define ulong unsigned long int
+
 double *vecallocd(int n);
 int *vecalloci(int n);
+ulong *vecalloculi(ulong n);
 double **matallocd(int m, int n);
 void vecfreed(double *pd);
+void vecfreeuli(ulong *pd);
 void vecfreei(int *pi);
 void matfreed(double **ppd);

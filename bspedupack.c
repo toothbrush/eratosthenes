@@ -19,6 +19,21 @@ double *vecallocd(int n){
 
 } /* end vecallocd */
 
+ulong *vecalloculi(ulong n)
+{
+    /* This function allocates a vector of integers of length n */
+    ulong *pi;
+
+    if (n==0){
+        pi= NULL; 
+    } else { 
+        pi= (ulong *)malloc(n*sizeof(ulong));
+        if (pi==NULL)
+            bsp_abort("vecalloculi: not enough memory");
+    }
+    return pi;
+
+} /* end vecalloci */
 int *vecalloci(int n){
     /* This function allocates a vector of integers of length n */
     int *pi;
@@ -69,6 +84,13 @@ void vecfreed(double *pd){
 
 } /* end vecfreed */
 
+void vecfreeuli(unsigned long *pi){
+    /* This function frees a vector of integers */
+
+    if (pi!=NULL)
+        free(pi);
+
+} /* end vecfreei */
 void vecfreei(int *pi){
     /* This function frees a vector of integers */
 

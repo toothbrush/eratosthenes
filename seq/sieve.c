@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
+
+#define ulong unsigned long
 
 enum bool { true, false };
-int nextPrime(int, enum bool*) ;
-void printPrimes(int, enum bool*) ;
+ulong nextPrime(ulong, enum bool*) ;
+void printPrimes(ulong, enum bool*) ;
 
-int main(int argc, char** argv)
+int main(ulong argc, char** argv)
 {
-    int N, i;
+    ulong N, i;
     printf("Hi! Welcome to sequential sieve.\n");
     //printf("Enter N = ");
     if(argc != 2) {
@@ -17,11 +20,15 @@ int main(int argc, char** argv)
     }
     else
     {
-        sscanf(argv[1], "%d", &N);
+        sscanf(argv[1], "%ld", &N);
     }
 
     // --- begin
 
+    time_t t1,t2;
+    time(&t1);
+
+    printf("Trying to alloc %ld Mb... \n",N*sizeof(enum bool)/1024/1024); 
     enum bool *A = malloc(sizeof(enum bool)*N);
 
     A[0] = false;
@@ -32,7 +39,7 @@ int main(int argc, char** argv)
         A[i] = true;
     }
 
-    int current = 2;
+    ulong current = 2;
 
     while (current <= sqrt((double)N))
     {
@@ -44,27 +51,29 @@ int main(int argc, char** argv)
     }
 
     printPrimes(N, A);
+    time(&t2);
+    printf("And it took: %lf sec\n", difftime(t2,t1)); 
 }
 
-int nextPrime(int c, enum bool*A) 
+ulong nextPrime(ulong c, enum bool*A) 
 {
-    int next = c+1; 
+    ulong next = c+1; 
     while ( A[next] != true)
         next++;
 
     return next;
 }
 
-void printPrimes(int N, enum bool* A)
+void printPrimes(ulong N, enum bool* A)
 {
-    int i;
-    int nPrimes=0;
+    ulong i;
+    ulong nPrimes=0;
     for(i = 0; i < N; i++)
         if(A[i] == true)
         {
-         //   printf("prime: %d\n", i);
+         //   printf("prime: %ld\n", i);
             nPrimes++;
         }
 
-    printf("So that's %d primes.\n", nPrimes); 
+    printf("So that's %ld primes.\n", nPrimes); 
 }

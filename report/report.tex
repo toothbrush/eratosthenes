@@ -44,6 +44,90 @@ synchronisation time and communication speed.
 
 \section{Prime Sieve}\label{sec:sieve}
 
+\subsection{Description}
+
+To quickly recap, Eratosthenes' method finds all prime numbers less than or
+equal to $n$. There are a number of obvious and less
+obvious improvements which can be made on this algorithm, but at its most basic
+form it is as follows. 
+
+\begin{enumerate}
+    \item Create a list of consecutive integers from two to $n$: (2, 3, 4, ...,
+        $n$).
+    \item Initially, let $p$ equal 2, the first prime number.
+    \item Strike from the list all multiples of $p$ less than or equal to $n$.
+        ($2p, 3p, 4p$, etc.)
+    \item Find the first number remaining on the list after $p$ (this number is
+        the next prime); replace $p$ with this number.
+    \item Repeat steps 3 and 4 until $p^2$ is greater than $n$.
+    \item All the remaining numbers in the list are prime.
+\end{enumerate}
+
+This algorithm will be assumed correct (proof is outside the scope of this
+report). One of the
+first optimisations is that crossing off can begin at $p^2$ since all smaller
+multiples of $p$ will already have been crossed off in earlier iterations. The
+time complexity after this optimisation is $O(n \log \log n)$ \cite{pp}. Another
+optimisation one could implement is to not make a list of all $n$ numbers, but
+leave out all even numbers, since these are known to be non-prime. This will
+save half the necessary memory, but asymptotically this makes no difference for
+memory requirements in the RAM model. 
+
+The sequential implementation can be found in Appendix \ref{app:seq}, and
+follows this algorithm closely. 
+
+\subsection{Data distribution}
+
+As a result of the BSP model's non-shared memory assumption,  finding a parallel
+implementation of our algorithm starts with deciding on a good data
+distribution. The consideration is that most of the work the algorithm does is
+crossing off numbers, therefore, we must distribute such that the crossing off
+of numbers is as evenly distributed over processors as possible. The first idea
+is then to use a so-called block distribution, where given $P$ processors and
+$N$ values, we give the each processor $\lceil N/P \rceil$ values, until the
+last processor, which we give $\lfloor N/P \rfloor$ values. This way, we can
+broadcast the smallest prime found, each processor can independently cross
+multiples off and find it's local minimum prime, and let $P(0)$ calculate the
+global minimum prime, and repeat. For more on the BSP model and data
+distributions, see \cite{biss}.
+
+\subsection{The parallel algorithm}
+
+More formally, the algorithm becomes as follows. In common BSP style, the
+algorithm is parameterised by the current processor ID $s$. The functions
+minidx(), maxidx() and local() are used for keeping track of indices in the
+array, since it has been split into blocks over the processors. Min and maxidx
+give the minimum and maximum number stored on a given processor, and local gives
+the local index of a number on a processor (this is found by calculating the
+argument modulo $\lceil N/P \rceil$, roughly). See Appendix \ref{app:par} for
+implementational details. 
+
+\begin{enumerate}
+    \item Initialise a list $A$ minidx($s$) .. maxidx($s$), all \texttt{true}.
+    \item If $s=0$ then $A_1 \leftarrow $\texttt{false} (we know 1 isn't prime).
+    \item Set $k\leftarrow 2$ (2 is our largest prime to start off with).
+    \item While $k^2 \le n$ \textbf{do}
+        \begin{enumerate}
+            \item For $i \in {k, 2 k, \cdots }$ set $A_{\textnormal{local}(i)} \leftarrow
+                $\texttt{false} (eliminate multiples of $k$ locally).
+            \item Find $m_s \leftarrow \displaystyle \textnormal{argmin}_{i}
+                (A_i = \texttt{false})$ (local next prime).
+            \item If $s=0$ then read all $m_i$ and select minimum (collect local
+                next primes).
+            \item Broadcast as $k$ (global next prime).
+        \end{enumerate}
+    \item \textbf{od}
+\end{enumerate}
+
+\subsection{Complexity}
+
+\ldots
+
+\section{Performance}
+
+Next we put our algorithms to the test. We hope to see a marked improvement over
+the sequential implementation, since the complexity is much better. 
+
 
 \section{Benchmarks}
 
@@ -228,6 +312,8 @@ communication time increases linearly in $h$.
     \bibitem[BSPep]{edupack}
         \url{http://www.staff.science.uu.nl/~bisse101/Software/software.html}, homepage of BSPedupack, an education set of sample code for the
         BSP library. 
+    \bibitem[Prit87]{pp} Pritchard, Paul, "Linear prime-number sieves: a family tree," Sci. Comput. Programming 9:1 (1987), pp. 17–35.
+    \bibitem[Biss04]{biss} Rob H. Bisseling, Parallel Scientific Computation: A Structured Approach using BSP and MPI, Oxford University Press, March 2004. ISBN 978-0-19-852939-2
 \end{thebibliography}
 
 \end{document}
