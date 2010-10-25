@@ -3,24 +3,24 @@
 #include <math.h>
 #include <time.h>
 
-#define ulong unsigned long
+#define ulong unsigned long long
 
 enum bool { true, false };
 ulong nextPrime(ulong, enum bool*) ;
 void printPrimes(ulong, enum bool*) ;
 
-int main(ulong argc, char** argv)
+int main(int argc, char** argv)
 {
     ulong N, i;
     printf("Hi! Welcome to sequential sieve.\n");
-    //printf("Enter N = ");
     if(argc != 2) {
         printf("Incorrect arguments idiot.\n");
         exit(1);
     }
     else
     {
-        sscanf(argv[1], "%ld", &N);
+        sscanf(argv[1], "%lu", &N);
+        printf("you entered N== %lu\n", N);
     }
 
     // --- begin
@@ -28,7 +28,7 @@ int main(ulong argc, char** argv)
     time_t t1,t2;
     time(&t1);
 
-    printf("Trying to alloc %ld Mb... \n",N*sizeof(enum bool)/1024/1024); 
+    printf("Trying to alloc %lu Mb... \n",N*sizeof(enum bool)/1024/1024); 
     enum bool *A = malloc(sizeof(enum bool)*N);
 
     A[0] = false;
@@ -71,9 +71,9 @@ void printPrimes(ulong N, enum bool* A)
     for(i = 0; i < N; i++)
         if(A[i] == true)
         {
-         //   printf("prime: %ld\n", i);
+            // do not print primes, just count them.
             nPrimes++;
         }
 
-    printf("So that's %ld primes.\n", nPrimes); 
+    printf("So that's %lu primes.\n", nPrimes); 
 }

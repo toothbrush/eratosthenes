@@ -45,7 +45,7 @@ ulong localIdx(int p, int s, ulong n, ulong global)
 }
 ulong blockLow(int p, int s, ulong n)
 {
-    // this means we've overflowed our max_value
+    // this means we have overflowed our max_value
     if(s*n < 0) 
          printf("Hm. s*n < 0: s=%lu, n=%lu, s*n=%lu\n", s,n,s*n);      
     return (s*n)/p; //implicit floor
@@ -108,7 +108,7 @@ ulong nextPrime(int p, int s, ulong n, ulong k, ulong *x)
     ulong newK = k+1;
     ulong local = MAX(
                     localIdx(p,s,n,newK),
-                    0); // don't consider primes outside our range
+                    0); // do not consider primes outside our range
 
     while(local < blockSize(p,s,n)-1 && x[local] == 0)
         local++;
@@ -130,7 +130,7 @@ void bspsieve(){
     
     double alpha, time0, time1;
     ulong *x;  // local list of candidates
-    ulong *ks; //place for proc0 to store intermediate k's
+    ulong *ks; //place for proc0 to store intermediate ks
     ulong  
           n, 
           nl, 
@@ -163,8 +163,8 @@ void bspsieve(){
     bsp_pop_reg(&n);
 
     printf("Sizeof(ulong) == %zu\n", SZUL);
-    nl= blockSize(p,s,n); // how big must s's block be?
-    printf("P(%lu) tries to alloc vec of %lu ulongs = %lu Mb\n",s,  nl, nl*SZUL/1024/1024);
+    nl= blockSize(p,s,n); // how big must s block be?
+    printf("P(%lu) tries to alloc vec of %lu ulongs = %zu Mb\n",s,  nl, nl*SZUL/1024/1024);
     x= vecalloculi(nl);
     if(x == NULL)
         bsp_abort("Couldn't allocate x[]!\n");
