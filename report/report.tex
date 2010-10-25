@@ -21,6 +21,9 @@
 
 \section{Introduction}
 
+This report documents the use of BSP-style\cite{BSP} parallel programming to
+find primes in parallel, using Eratosthenes' method. 
+
 The so-called sieve of Eratosthenes is an old and unsophisticated method for
 finding all primes up to a given number $N$, which lends itself quite nicely to
 parallelisation. The idea is roughly as follows: start with the lowest known
@@ -28,11 +31,19 @@ prime $i$ (given: $i \leftarrow 2$ in the first iteration) and cross all
 multiples of $i$ out of your list of potential primes, which starts off with all
 natural numbers 1\ldots$N$. While $i$ is less than $N$, repeat. The next lowest
 known prime is the smallest number which hasn't been crossed off the list yet.
-More information about Eratosthenes' prime sieve can be found in 
+More information about Eratosthenes' prime sieve can be found in ???. 
 
-\section{Benchmarks}
+Secondly, we take a look at benchmarking BSP computers and the performance
+measured when testing on Huygens\cite{sarahuygens}, the Dutch national
+supercomputer, and on a recent MacBook. Specifically, the benchmark is aimed at
+parallel computers, measuring not only computation speed, but also
+synchronisation time and communication speed. 
+
+
 
 \section{Prime Sieve}
+
+\section{Benchmarks}
 
 \appendix
 \section{Sequential sieve code}
@@ -45,8 +56,11 @@ More information about Eratosthenes' prime sieve can be found in
 
 
 \begin{thebibliography}{99}
-    \bibitem[SPIN]{SPIN} \url{http://www.spinroot.com}, homepage of the SPIN
-        automatic model checker. 
+    \bibitem[BSP]{BSP} \url{http://www.bsp-worldwide.org}, homepage of the BSP
+        association. 
+    \bibitem[SHuy]{sarahuygens}
+        \url{https://subtrac.sara.nl/userdoc/wiki/huygens/description},
+        information page on the Huygens supercomputer. 
 \end{thebibliography}
 
 \end{document}
