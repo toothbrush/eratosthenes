@@ -133,18 +133,15 @@ The obtained results can be seen in Table \ref{tbl:results}.
 \begin{table}
     \centering
     \begin{tabular}{c|c|c}
-        Description & $P=1$ & $P=2$ & $P=4$ \\
+        Computer & $P=1$ & $P=2$ & $P=4$& $P=8$& $P=16$& $P=32$    \\
         \hline
-        Huygens $N=10^{8}$ & \approx 1 s & - & - \\
-        Laptop $N=10^{7} & \approx 2 s & 
-        \ldots
+        Huygens & 20.36 & 10.87 & 5.54 & 2.96 & 1.91 & 11.28 \\
+        MacBook & 12.14 &  7.60 & 7.88 & 8.40 &11.16 & 30.04 \\
         \hline
-
-
     \end{tabular}
     \caption{The results when running sequential and parallel implementations of
-    the Sieve of Eratosthenes. Above the line are the sequential runs, under the
-    line the parallel runs.}
+    the Sieve of Eratosthenes. In all cases, $N=10^8$ and unit of time is
+    seconds. }
     \label{tbl:results}
 \end{table}
 
