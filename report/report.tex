@@ -163,12 +163,39 @@ The obtained results can be seen in Table \ref{tbl:results}.
         MacBook & 12.14 &  7.60 & 7.88 & 8.40 &11.16 & 30.04 \\
         \hline
     \end{tabular}
-    \caption{The results when running sequential and parallel implementations of
+    \caption{The results when running the parallel implementation of
     the Sieve of Eratosthenes. In all cases, $N=10^8$ and unit of time is
     seconds. }
     \label{tbl:results}
 \end{table}
 
+In comparison, the results obtained using the simpler sequential algorithm, also
+using $N=10^8$, are more interesting. 
+
+\begin{table}
+    \centering
+    \begin{tabular}{c|c}
+        Computer & time   \\
+        \hline
+        Huygens & 6 \\
+        MacBook & 7 \\
+        \hline
+    \end{tabular}
+    \caption{The results when running the sequential implementation of
+    the Sieve of Eratosthenes. Unit of time is
+    seconds. }
+    \label{tbl:resultsSeq}
+\end{table}
+
+Due to memory limitations (as a result of not fully optimising the algorithm)
+$N$ isn't set higher than $10^8$. We see that in this case, Huygens is a little
+faster than the laptop, which isn't what we would expect given the benchmark
+results, but is what we would expect given that the laptop is running at 2.4Ghz
+and Huygens' cores run at 4.7Ghz. 
+
+In all cases the output of the algorithm was verified to produce the correct
+primes. Mathematica was used as the authority on the number of primes below a
+given number. 
 
 \subsection{Analysis of results}
 
@@ -363,7 +390,17 @@ to. After all the processors have been communicated with (i.e. $h>56$) BSP is
 smart enough to bundle communication to a given processor, so that the
 communication time increases linearly in $h$. 
 
+\section{Conclusion}
 
+Evidently a lot of performance can be gained if an algorithm is parallelised.
+Unfortunately this isn't always trivial; the case of the sieve of Eratosthenes
+happens to be relatively simple, but many other algorithms are a lot more of a
+challenge to parallelise and still see a performance increase. 
+
+The conceptual complexity of an algorithm also dramatically increases when we
+have to reason about concurrently working processors, which complicates the task
+even more. It is, however, fruitful to assess whether a given algorithm can be
+parallelised, as we have seen the gains to be achieved in the results above. 
 
 \appendix
 \section{Sequential sieve code}\label{app:seq}
