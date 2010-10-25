@@ -1,0 +1,51 @@
+max prime requested = 100000000
+Using 16 processors. 
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+Now we have 16 processors.
+P(0) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(14) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(4) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(7) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(10) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(1) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(5) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(2) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(8) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(11) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(15) tries to alloc vec of 6250001 ulongs, size would be = 47 Mb
+P(3) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(6) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(12) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(13) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+P(9) tries to alloc vec of 6250000 ulongs, size would be = 47 Mb
+proc 6 finds 356777 primes.
+proc 0 finds 428816 primes.
+This took only 11.161592 seconds.
+proc 12 finds 343976 primes.
+proc 13 finds 342183 primes.
+proc 5 finds 359953 primes.
+proc 11 finds 345472 primes.
+proc 10 finds 347345 primes.
+proc 9 finds 349095 primes.
+proc 1 finds 389887 primes.
+proc 3 finds 369794 primes.
+proc 8 finds 351258 primes.
+proc 14 finds 341020 primes.
+proc 4 finds 364470 primes.
+proc 7 finds 354007 primes.
+proc 2 finds 377430 primes.
+proc 15 finds 339972 primes.

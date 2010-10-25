@@ -1,0 +1,99 @@
+max prime requested = 100000000
+Using 32 processors. 
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+P(0) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(9) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(11) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(13) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(16) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(6) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(19) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(30) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(18) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(29) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(7) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(27) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(28) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(5) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(15) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(21) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(24) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(14) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(22) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(26) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(31) tries to alloc vec of 3125001 ulongs, size would be = 23 Mb
+P(4) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(8) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(10) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(1) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(3) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(2) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(12) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(20) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(23) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(25) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(17) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+proc 13 finds 177814 primes.
+proc 25 finds 171824 primes.
+proc 7 finds 184104 primes.
+proc 31 finds 169704 primes.
+proc 15 finds 176540 primes.
+proc 30 finds 170268 primes.
+proc 0 finds 225175 primes.
+This took only 30.035247 seconds.
+proc 17 finds 175331 primes.
+proc 8 finds 182784 primes.
+proc 28 finds 170746 primes.
+proc 6 finds 185690 primes.
+proc 11 finds 179574 primes.
+proc 9 finds 181686 primes.
+proc 14 finds 177467 primes.
+proc 5 finds 187658 primes.
+proc 10 finds 180379 primes.
+proc 22 finds 172957 primes.
+proc 21 finds 173577 primes.
+proc 4 finds 189772 primes.
+proc 12 finds 178963 primes.
+proc 3 finds 192851 primes.
+proc 27 finds 170903 primes.
+proc 2 finds 197036 primes.
+proc 18 finds 174811 primes.
+proc 23 finds 172515 primes.
+proc 1 finds 203641 primes.
+proc 24 finds 172152 primes.
+proc 16 finds 175927 primes.
+proc 29 finds 170274 primes.
+proc 19 finds 174284 primes.
+proc 20 finds 173768 primes.
+proc 26 finds 171280 primes.

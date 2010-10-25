@@ -1,0 +1,6 @@
+max prime requested = 100000000
+Using 1 processors. 
+Now we have 1 processors.
+P(0) tries to alloc vec of 100000001 ulongs, size would be = 762 Mb
+proc 0 finds 5761455 primes.
+This took only 12.138662 seconds.
