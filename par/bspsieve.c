@@ -111,8 +111,6 @@ ulong nextPrime(int p, int s, ulong n, ulong k, ulong *x)
 {
     // find minimal i s.t. i > k and i unmarked
 
-    if(p!=2)
-        printf("okay, numProcs = %d??\n", p);
     ulong newK = k+1;
     ulong local = MAX(
                     localIdx(p,s,n,newK),
@@ -157,7 +155,7 @@ void bspsieve(){
     
     bsp_begin(P);
     p= bsp_nprocs(); /* p = number of processors obtained */ 
-    printf("Now we have %lld processors.\n", p);
+    printf("Now we have %d processors.\n", p);
     s= bsp_pid();    /* s = processor number */ 
     if (s==0){
         if(n<0)
@@ -264,9 +262,9 @@ int main(int argc, char **argv){
     P = bsp_nprocs(); // maximum amount of procs
 
     if ( blockSize(P, 0, N) < sqrt(N))
-        printf("WARNING: such a large P (%lld) with relatively small N (%lld) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
+        printf("WARNING: such a large P (%d) with relatively small N (%lld) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
 
-    printf("Using %lld processors. \n", P);
+    printf("Using %d processors. \n", P);
 
     /* SPMD part */
     bspsieve();
