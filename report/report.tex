@@ -58,7 +58,7 @@ presented in Figures 1..2.
 \subsection{Original benchmark}
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-huy-put-p2.png}
+        \includegraphics{img/bench-huy-put-p2.pdf}
     \end{center}
     \caption{Benchmark results on Huygens with $P$=2; the benchmark bottom line
     was $r=$ 194.357 Mflop/s, $g=$ 54.2, $l=$ 1986.4}
@@ -67,7 +67,7 @@ presented in Figures 1..2.
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-laptop-put.png}
+        \includegraphics{img/bench-laptop-put.pdf}
     \end{center}
     \caption{Benchmark results on MacBook with $P$=2; bottom line was  $r=$
     399.853 Mflop/s, $g=$ 30.9, $l=$ 1112.4 }
@@ -78,7 +78,7 @@ Story about distributed $P=2$ on Huygens. Talk about above 2 figs.
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-huy-put-p2-dist}
+        \includegraphics{img/bench-huy-put-p2-dist.pdf}
     \end{center}
     \caption{The same test as in Figure \ref{fig:bench-huy-put-p2}, but then
     instead of 2 processes on one node, we tried 2 processes on 2 nodes. The
@@ -93,7 +93,7 @@ Now we change puts into gets\ldots
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-huy-get-p2.png}
+        \includegraphics{img/bench-huy-get-p2.pdf}
     \end{center}
     \caption{Having changed \texttt{put}s into \texttt{get}s we measure again on
     Huygens with $P=2$. Bottom line: $r=$ 191.062 Mflop/s, $g=$ 87.2, $l=$ 2574.6}
@@ -102,7 +102,7 @@ Now we change puts into gets\ldots
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-laptop-get.png}
+        \includegraphics{img/bench-laptop-get.pdf}
     \end{center}
     \caption{MacBook with $P=2$. Bottom line: $r=$ 389.348 Mflop/s, $g=$ 43.5, $l=$ 1240.1}
     \label{fig:bench-laptop-get-p2}
@@ -110,7 +110,7 @@ Now we change puts into gets\ldots
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-huy-get-p2-dist}
+        \includegraphics{img/bench-huy-get-p2-dist.pdf}
     \end{center}
     \caption{The same test as in Figure \ref{fig:bench-huy-get-p2}, but then
     instead of 2 processes on one node, we tried 2 processes on 2 nodes. The
@@ -122,7 +122,7 @@ Now we try 56 procs on the MacBook
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics{img/bench-laptop-get-p56.png}
+        \includegraphics{img/bench-laptop-get-p56.pdf}
     \end{center}
     \caption{Test on the MacBook with $P=56$, using \texttt{get}s. Bottom line
     now becomes $r=$ 445.799 Mflop/s, $g=$ 4201.9, $l=$ 10037639.0}
