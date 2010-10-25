@@ -95,6 +95,11 @@ probably be cheaper than if we were to do the same benchmark, but distribute it
 over 2 nodes, so the communication has to leave the node as opposed to being
 local, as it would have been in Figure  \ref{fig:bench-huy-put-p2}. 
 
+We see predictable and expected linear behaviour on Huygens, but the laptop
+results are a
+lot more noisy. We attribute this to the fact that other processes such as the
+graphical user interface are running which generate unpredictable performance
+hits. These observations also hold on the get-versions of these 2 tests.
 
 \begin{figure}[h]
     \begin{center}
@@ -111,6 +116,16 @@ distinct nodes on Huygens. We indeed see a marked increase in communication cost
 $g$ and synchronisation cost $l$. As we would expect, the computational rate $r$
 is basically unaffected by this change, as the work needing to be done locally
 is the same as before. 
+
+Since here we are forcing network communication, the performance becomes more
+interesting to analyse. Where the local version (Figure
+\ref{fig:bench-huy-put-p2}) has a very straight performance ``curve'', we now
+observe a peak and some waviness. The waviness is attributed to other network
+communication outside of our control which will affect the speed with which our
+packets reach their destination; the peak is possibly the point at which the
+underlying layer decides to switch to another, more high-volume, communication
+scheme. The latter point is, however, guesswork, without knowing more about our
+platform. 
 
 \subsection{Changing to \texttt{get}s}
 Now we change puts into gets in the benchmark algorithm. The hypothesis is that
@@ -160,6 +175,9 @@ explanation for this, and attribute it to incidental load on the shared node
 being used. Note that this is plausible seeing the entire benchmark runs in
 about 20 seconds, which will never give a very accurate picture of a computers
 average performance. 
+
+We also see not 1, but at least 2 discernible peaks in the curve. Once again the
+conjecture is that the communication schemes used switch at these points. 
 
 As a last effort at producing more interesting results, we run the benchmark on
 the laptop with $P=56$. This isn't done on Huygens since it will be a waste of
