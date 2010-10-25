@@ -1,7 +1,5 @@
 Hi! Welcome to sequential sieve.
-So that's 26355867 primes.
-
-real9m24.141s
-user0m33.053s
-sys0m59.581s
-
+you entered N== 100000000
+Trying to alloc 381 Mb... 
+So that's 5761455 primes.
+And it took: 7.000000 sec
