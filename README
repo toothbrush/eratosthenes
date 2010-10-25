@@ -1,5 +1,5 @@
 Hi. Find the sequential version in the seq/ folder, and the parallel (BSPonMPI library) version in the par/ folder. 
 
-Interesting:
+Inspiration for distribution:
 http://www.parl.clemson.edu/~walt/ece493/ece493-4.pdf
 

@@ -47,6 +47,7 @@ int main(int argc, char** argv)
 
     while (current*current <= N)
     {
+        // start at current^2, optimisation
         for(i = current; i <= N/current; i++)
         {
             A[i*current] = false;
@@ -57,6 +58,7 @@ int main(int argc, char** argv)
     printPrimes(N, A);
     time(&t2);
     printf("And it took: %lf sec\n", difftime(t2,t1)); 
+    exit(0);
 }
 
 ulong nextPrime(ulong c, enum bool*A) 

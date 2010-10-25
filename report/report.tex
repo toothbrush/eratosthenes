@@ -4,21 +4,30 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 
-\author{Paul van der Walt\\\url{paul@denknerd.org}}
+\author{Paul van der Walt\\\url{paul@denknerd.org}\\\url{http://github.com/toothbrush/eratosthenes}\footnote{The complete
+working code and project can be found at this location, so all the tests and
+results presented can be verified. }}
 \date{\today}
 \title{Parallel Algorithms: Eratosthenes' Sieve}
 
 \begin{document}
 \maketitle
+\begin{quote}
+    \center{\emph{Sift the Twos and sift the Threes, \\
+    The Sieve of Eratosthenes. \\
+    When the multiples sublime, \\
+    The numbers that remain are Prime.}}
+\end{quote}
+
 \begin{abstract}
     In this report the findings are presented after benchmarking the Dutch
     supercomputer Huygens and a personal computer. The Sieve of Eratosthenes is
     then implemented in sequence and parallel (including a number of performance
-    improvements), and tested on Huygens and a
+    improvements), and tested on Huygens and the
     personal computer. 
 \end{abstract}
 \tableofcontents
-
+\clearpage
 \section{Introduction}
 
 This report documents the use of BSP-style\cite{BSP} parallel programming to
@@ -74,8 +83,7 @@ save half the necessary memory, but asymptotically this makes no difference for
 memory requirements in the RAM model. 
 
 The sequential implementation can be found in Appendix \ref{app:seq}, and
-follows this algorithm closely. Since this program was only used as a means to
-implementing a working sequential sieve, the time results will be omitted. 
+follows this algorithm closely. 
 
 \subsection{Data distribution}
 
@@ -85,12 +93,25 @@ distribution. The consideration is that most of the work the algorithm does is
 crossing off numbers, therefore, we must distribute such that the crossing off
 of numbers is as evenly distributed over processors as possible. The first idea
 is then to use a so-called block distribution, where given $P$ processors and
-$N$ values, we give the each processor $\lceil N/P \rceil$ values, until the
-last processor, which we give $\lfloor N/P \rfloor$ values. This way, we can
+$N$ values, we give the each processor as close as possible to $N/P$ values. This way, we can
 broadcast the smallest prime found, each processor can independently cross
 multiples off and find it's local minimum prime, and let $P(0)$ calculate the
 global minimum prime, and repeat. For more on the BSP model and data
 distributions, see \cite{biss}.
+
+The data distribution we used is therefore slightly different than the ``naive''
+block distribution, where the last processor potentially has only 1 element. 
+
+\begin{itemize}
+    \item First element controlled by processor $s$: $\lfloor \frac{s\cdot
+        N}{P} \rfloor$
+    \item Last element controlled by processor $s$: $\lfloor
+        \frac{(i+1)N}{P} \rfloor -1$
+    \item Processor controlling element $j$: $\lfloor \frac{P(j+1) -1}{N} \rfloor$
+\end{itemize}
+
+This distribution causes the number of elements per processor to differ by at
+most 1. 
 
 \subsection{The parallel algorithm}
 
