@@ -54,7 +54,15 @@ as there are in the order of three thousand of them, but only on 1 and 2 nodes.
 
 The benchmark that has been done is the one included in BSPedupack which can be
 found at \cite{edupack}, referred to as \texttt{bspbench.c}. The results are
-presented in Figures \ref{fig:bench-huy-put-p2} to \ref{fig:bench-laptop-get-p56}. 
+presented in Figures \ref{fig:bench-huy-put-p2} to
+\ref{fig:bench-laptop-get-p56}. In all these figures, the horizontal axis
+represents the value of the $h$-relation, in other words, how many data words
+are communicated in the communication superstep, and the vertical axis
+represents the time (in flops) taken for the communication superstep.
+Furthermore the well-known meanings of $r$, $g$ and $l$ hold, namely computation
+rate, communication cost per data word in flops and sync time in flops,
+respectively. 
+
 \subsection{Original benchmark}
 \begin{figure}[h]
     \begin{center}
@@ -161,7 +169,7 @@ computation rate $r$ is still independent of the configuration, but the
 communication cost and specifically synchronisation time skyrocket. The reasons
 for this are obvious: namely, communication becomes more costly when the
 underlying BSP layer has to manage more and more processors, and the
-synchronisation cost is hypothesised to be O($n$) (i.e. linearly increasing in
+synchronisation cost is hypothesised to be $\omega(n)$ (i.e. at least linearly increasing in
 the number of processors used, $N$). 
 
 \begin{figure}[h]
@@ -173,14 +181,22 @@ the number of processors used, $N$).
     \label{fig:bench-laptop-get-p56}
 \end{figure}
 
+Interestingly we also see a sharp increase in communication time before $h=56$,
+where after that point the time levels out to become linear. This is logical,
+since before $P=56$, not all processors are being communicated with, so the
+communication superstep takes much longer each time an extra processor is talked
+to. After all the processors have been communicated with (i.e. $h>56$) BSP is
+smart enough to bundle communication to a given processor, so that the
+communication time increases linearly in $h$. 
+
 
 
 \appendix
-\section{Sequential sieve code}
+\section{Sequential sieve code}\label{app:seq}
 
 \lgrindfile{../seq/sieve.lg}
 
-\section{Parallel sieve code}
+\section{Parallel sieve code}\label{app:par}
 
 \lgrindfile{../par/bspsieve.lg}
 
