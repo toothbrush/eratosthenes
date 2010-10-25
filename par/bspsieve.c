@@ -27,22 +27,11 @@ ulong findMinimum(int p, ulong* ks)
 {
 
     ulong min = LLONG_MAX;
-    printf("ulong_max ?= %lld\n", min);
     ulong i;
     for(i = 0; i<p; i++)
     {
-        printf("  %lld  ", ks[i]);
-        if(ks[i] < min)
-        {
-            min = ks[i];
-            printf ( "*");
-        }
-        else
-        {
-            ;
-        }
+        min = MIN(ks[i], min);
     }
-    printf("\n returning minimum = %lld \n", min);
 
     return min;
 }
