@@ -1,16 +1,15 @@
-# @ node = 32
+# @ node = 2
 #
-# @ tasks_per_node = 2
+# @ tasks_per_node = 16
 # @ notification = never
 # @ input = /dev/null
-# @ output = out-parsieve.$(jobid)
+# @ output = par-huy-p32
 # @ error = err-parsieve.$(jobid)
-# @ wall_clock_limit = 100:00
+# @ wall_clock_limit = 10:00
 # @ job_type = parallel
-# @ class = short
-# @ resources = ConsumableMemory(7000) 
+# nothingresources = ConsumableMemory(7000) 
 # @ queue
 #
 # @ node_usage = shared
 cd $HOME/Students10/pdwalt/eratosthenes/par
-./sieve 4000000
+./sieve 100000000

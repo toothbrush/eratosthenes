@@ -1,5 +1,0 @@
-max prime requested = 500000000
-Using 2 processors. 
-proc 0 finds 13679318 primes.
-This took only 32.493687 seconds.
-proc 1 finds 12676549 primes.

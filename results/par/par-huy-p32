@@ -1,0 +1,284 @@
+max prime requested = 100000000
+Using 32 processors. 
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+Now we have 32 processors.
+P(16) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(18) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(20) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(28) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(30) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(31) tries to alloc vec of 3125001 ulongs, size would be = 23 Mb
+P(17) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(19) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(21) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(22) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(23) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(24) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(25) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(26) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(27) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(29) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(0) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(1) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(2) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(3) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(4) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(5) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(6) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(7) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(8) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(9) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(10) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(11) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(12) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(13) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(14) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+P(15) tries to alloc vec of 3125000 ulongs, size would be = 23 Mb
+proc 0 finds 225175 primes.
+This took only 11.282711 seconds.
+proc 29 finds 170274 primes.
+proc 5 finds 187658 primes.
+proc 31 finds 169704 primes.
+proc 7 finds 184104 primes.
+proc 17 finds 175331 primes.
+proc 11 finds 179574 primes.
+proc 12 finds 178963 primes.
+proc 15 finds 176540 primes.
+proc 1 finds 203641 primes.
+proc 3 finds 192851 primes.
+proc 4 finds 189772 primes.
+proc 22 finds 172957 primes.
+proc 2 finds 197036 primes.
+proc 24 finds 172152 primes.
+proc 13 finds 177814 primes.
+proc 25 finds 171824 primes.
+proc 14 finds 177467 primes.
+proc 26 finds 171280 primes.
+proc 6 finds 185690 primes.
+proc 27 finds 170903 primes.
+proc 10 finds 180379 primes.
+proc 28 finds 170746 primes.
+proc 8 finds 182784 primes.
+proc 30 finds 170268 primes.
+proc 9 finds 181686 primes.
+proc 18 finds 174811 primes.
+proc 20 finds 173768 primes.
+proc 19 finds 174284 primes.
+proc 16 finds 175927 primes.
+proc 21 finds 173577 primes.
+proc 23 finds 172515 primes.
+
+### Summarized output of "llq -l -x -j p6012.huygens.sara.nl.268508.0" invoked on p6003 ###
+        Job Step Id: p6012.huygens.sara.nl.268508.0
+           Job Name: p6012.huygens.sara.nl.268508
+          Step Name: 0
+  Structure Version: 10
+              Owner: bissstud
+         Queue Date: Tue Oct 26 00:23:48 2010
+             Status: Running
+          Recurring: False
+      Dispatch Time: Tue Oct 26 00:24:01 2010
+    Completion Date: Tue Oct 26 00:24:25 CEST 2010 (i.e. time of job epilog invocation)
+        Favored Job: No
+      Notifications: Never
+ Virtual Image Size: 1 kb
+         Large Page: N
+         Coschedule: no
+       SMT required: as_is
+    MetaCluster Job: no
+     Checkpointable: no
+   Ckpt Elapse Time: 0 seconds
+    Ckpt Accum Time: 0 seconds
+  Restart From Ckpt: no
+ Restart Same Nodes: no
+            Restart: yes
+        Preemptable: yes
+ Preempt Wait Count: 0
+     User Hold Time: 00:00:00 (0 seconds)
+               RSet: RSET_MCM_AFFINITY
+Mcm Affinity Option: MCM_DISTRIBUTE MCM_MEM_PREF MCM_SNI_NONE
+      Task Affinity: core(1)
+      Cpus Per Core:  0
+   Parallel Threads:  0
+                 In: /dev/null
+                Out: par-huy-p32
+                Err: err-parsieve.268508
+Initial Working Dir: /gpfs/h05/bissstud/Students10/pdwalt/eratosthenes/par
+          Resources: ConsumableMemory(2.000 gb)
+          Step Type: General Parallel
+         Node Usage: not_shared
+    Submitting Host: p6012.huygens.sara.nl
+        Schedd Host: p6012.huygens.sara.nl
+      Job Queue Key: 268508
+        Notify User: bissstud@p6012.huygens.sara.nl
+              Shell: /bin/bash
+  LoadLeveler Group: No_Group
+              Class: short
+    Ckpt Hard Limit: undefined
+    Ckpt Soft Limit: undefined
+     Cpu Hard Limit: unlimited
+     Cpu Soft Limit: unlimited
+    Data Hard Limit: undefined
+    Data Soft Limit: undefined
+      As Hard Limit: undefined
+      As Soft Limit: undefined
+   Nproc Hard Limit: undefined
+   Nproc Soft Limit: undefined
+ Memlock Hard Limit: undefined
+ Memlock Soft Limit: undefined
+   Locks Hard Limit: undefined
+   Locks Soft Limit: undefined
+  Nofile Hard Limit: undefined
+  Nofile Soft Limit: undefined
+    Core Hard Limit: unlimited
+    Core Soft Limit: 0 bytes
+    File Hard Limit: undefined
+    File Soft Limit: undefined
+   Stack Hard Limit: unlimited
+   Stack Soft Limit: unlimited
+     Rss Hard Limit: undefined
+     Rss Soft Limit: undefined
+Step Cpu Hard Limit: unlimited
+Step Cpu Soft Limit: unlimited
+Wall Clk Hard Limit: 00:10:00 (600 seconds)
+Wall Clk Soft Limit: 00:10:00 (600 seconds)
+         Unix Group: bissstud
+ User Space Windows: 0
+      Bulk Transfer: No
+Step Adapter Memory: 0 bytes
+          Step Cpus: 0
+Step Virtual Memory: 0.000 mb
+   Step Real Memory: 64.000 gb
+Step Large Page Mem: 0.000 mb
+       Running Host: p6003.huygens.sara.nl
+      Machine Speed: 1.000000
+  Starter User Time: 00:00:00.000000
+Starter System Time: 00:00:00.000000
+ Starter Total Time: 00:00:00.000000
+     Starter maxrss: 0
+      Starter ixrss: 0
+      Starter idrss: 0
+      Starter isrss: 0
+     Starter minflt: 0
+     Starter majflt: 0
+      Starter nswap: 0
+    Starter inblock: 0
+    Starter oublock: 0
+     Starter msgsnd: 0
+     Starter msgrcv: 0
+   Starter nsignals: 0
+      Starter nvcsw: 0
+     Starter nivcsw: 0
+     Step User Time: 00:00:00.000000
+   Step System Time: 00:00:00.000000
+    Step Total Time: 00:00:00.000000
+        Step maxrss: 0
+         Step ixrss: 0
+         Step idrss: 0
+         Step isrss: 0
+        Step minflt: 0
+        Step majflt: 0
+         Step nswap: 0
+       Step inblock: 0
+       Step oublock: 0
+        Step msgsnd: 0
+        Step msgrcv: 0
+      Step nsignals: 0
+         Step nvcsw: 0
+        Step nivcsw: 0
+     Cluster Option: none
+--------------------------------------------------------------------------------
+Node
+----
+
+   Name            : 
+   Requirements    : 
+   Preferences     : 
+   Node minimum    : 2
+   Node maximum    : 2
+   Node actual     : 2
+   Allocated Hosts : p6003.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >,MCM2:CPU< 32-33 >,MCM3:CPU< 48-49 >,MCM0:CPU< 2-3 >,MCM1:CPU< 18-19 >,MCM2:CPU< 34-35 >,MCM3:CPU< 50-51 >,MCM0:CPU< 4-5 >,MCM1:CPU< 20-21 >,MCM2:CPU< 36-37 >,MCM3:CPU< 52-53 >,MCM0:CPU< 6-7 >,MCM1:CPU< 22-23 >,MCM2:CPU< 38-39 >,MCM3:CPU< 54-55 >
+                   + p6004.huygens.sara.nl:RUNNING:eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >,MCM1:CPU< 16-17 >,MCM2:CPU< 32-33 >,MCM3:CPU< 48-49 >,MCM0:CPU< 2-3 >,MCM1:CPU< 18-19 >,MCM2:CPU< 34-35 >,MCM3:CPU< 50-51 >,MCM0:CPU< 4-5 >,MCM1:CPU< 20-21 >,MCM2:CPU< 36-37 >,MCM3:CPU< 52-53 >,MCM0:CPU< 6-7 >,MCM1:CPU< 22-23 >,MCM2:CPU< 38-39 >,MCM3:CPU< 54-55 >
+
+   Master Task
+   -----------
+
+      Executable   : /home/bissstud/Students10/pdwalt/eratosthenes/par/jobscript-sieve
+      Exec Args    : 
+      Num Task Inst: 1
+      Task Instance: p6003:-1,
+
+   Task
+   ----
+
+      Num Task Inst: 32
+      Task Instance: p6003:0:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6003:1:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6003:2:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 32-33 >
+      Task Instance: p6003:3:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 48-49 >
+      Task Instance: p6003:4:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 2-3 >
+      Task Instance: p6003:5:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 18-19 >
+      Task Instance: p6003:6:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 34-35 >
+      Task Instance: p6003:7:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 50-51 >
+      Task Instance: p6003:8:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 4-5 >
+      Task Instance: p6003:9:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 20-21 >
+      Task Instance: p6003:10:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 36-37 >
+      Task Instance: p6003:11:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 52-53 >
+      Task Instance: p6003:12:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 6-7 >
+      Task Instance: p6003:13:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 22-23 >
+      Task Instance: p6003:14:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 38-39 >
+      Task Instance: p6003:15:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 54-55 >
+      Task Instance: p6004:16:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 0-1 >
+      Task Instance: p6004:17:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 16-17 >
+      Task Instance: p6004:18:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 32-33 >
+      Task Instance: p6004:19:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 48-49 >
+      Task Instance: p6004:20:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 2-3 >
+      Task Instance: p6004:21:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 18-19 >
+      Task Instance: p6004:22:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 34-35 >
+      Task Instance: p6004:23:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 50-51 >
+      Task Instance: p6004:24:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 4-5 >
+      Task Instance: p6004:25:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 20-21 >
+      Task Instance: p6004:26:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 36-37 >
+      Task Instance: p6004:27:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 52-53 >
+      Task Instance: p6004:28:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM0:CPU< 6-7 >
+      Task Instance: p6004:29:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM1:CPU< 22-23 >
+      Task Instance: p6004:30:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM2:CPU< 38-39 >
+      Task Instance: p6004:31:eth2(NOT SPECIFIED,IP,-1,Shared,0M),MCM3:CPU< 54-55 >
+--------------------------------------------------------------------------------
+Job Step Status on Allocated Hosts 
+----------------------------------
+
+    p6003.huygens.sara.nl:RUNNING
+    p6004.huygens.sara.nl:RUNNING
+
+### End of summarized "llq" output ###
