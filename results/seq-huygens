@@ -1,0 +1,5 @@
+Hi! Welcome to sequential sieve.
+you entered N== 100000000
+Trying to alloc 381 Mb... 
+So that's 5761455 primes.
+And it took: 6.000000 sec
