@@ -74,7 +74,8 @@ save half the necessary memory, but asymptotically this makes no difference for
 memory requirements in the RAM model. 
 
 The sequential implementation can be found in Appendix \ref{app:seq}, and
-follows this algorithm closely. 
+follows this algorithm closely. Since this program was only used as a means to
+implementing a working sequential sieve, the time results will be omitted. 
 
 \subsection{Data distribution}
 
@@ -125,8 +126,10 @@ implementational details.
 
 \section{Performance}
 
+\subsection{Timed results}
 Next we put our algorithms to the test. We hope to see a marked improvement over
-the sequential implementation, since the complexity is much better. 
+the sequential (read: $P=1$) implementation, since the complexity is much better
+when $P$ increases. 
 
 The obtained results can be seen in Table \ref{tbl:results}. 
 
@@ -146,8 +149,37 @@ The obtained results can be seen in Table \ref{tbl:results}.
 \end{table}
 
 
+\subsection{Analysis of results}
 
-\section{Benchmarks}
+A number of things are clear when we look at the results of Table
+\ref{tbl:results}. First of all, we see that the laptop indeed outperforms
+Huygens when using a single core, which is also seen in Section \ref{sec:bench}
+where the raw computational rate $r$ is measured to be higher on the laptop. The
+most likely cause for this is that when running on the laptop, all other
+processes can be given lower priority, enabling the sieve to use all available
+processor power. On Huygens, however, nodes are shared, and therefore we are not
+the sole users of a given node. 
+
+When we start increasing $P$ we see the profit from parallelising the algorithm.
+The running time roughly halves, as expected, when running on 2 cores, and for
+the MacBook, this is when maximal performance is achieved. This is because the
+MacBook has a dual-core processor, so setting $P=2$ is making optimal use of the
+resources. On Huygens, however, nodes have 16 cores each, which is why we see a
+continuing decrease in running time until $P=16$. The sudden increase at $P=32$
+is as a result of using 2 nodes with 16 cores each; now the communication has to
+cross an intermediary network and isn't local any more. 
+
+On the MacBook, the reason for the time increase is different: all threads are
+still local, but since there are only 2 cores, creating more threads only adds
+to the overhead which BSP has to administer, and doesn't off a performance
+improvement. 
+
+These results are all consistent with our theoretical analysis of the algorithm,
+namely that the performance will increase linearly with the number of processors
+available, assuming communication cost doesn't dominate, which is what we see in
+the case of $P=32$ on Huygens. 
+
+\section{Benchmarks}\label{sec:bench}
 
 The two computers tested in this section, as already mentioned, are a recent
 MacBook\footnote{Core2Duo 2.4Ghz with 4GB memory.} and Huygens, the national

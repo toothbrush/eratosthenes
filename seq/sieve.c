@@ -5,10 +5,6 @@
 
 #define ulong long
 
-
-//hmmm?
-//unsigned long long
-
 enum bool { true, false };
 ulong nextPrime(ulong, enum bool*) ;
 void printPrimes(ulong, enum bool*) ;
@@ -37,14 +33,16 @@ int main(int argc, char** argv)
     if(A == NULL)
     { printf("Bad news, malloc failed. Try lower N.\n"); exit(1); }
 
+    // assume all are prime to start with, 
+    // except 0 and 1
     A[0] = false;
     A[1] = false;
     for(i = 2; i < N; i++)
     {
-        //assume all are prime to start with.
         A[i] = true;
     }
 
+    // ... and start with k <- 2
     ulong current = 2;
 
     while (current*current <= N)
