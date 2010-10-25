@@ -21,8 +21,8 @@
 #define MAX(a,b) ((a)>(b) ? (a) : (b))
 #define MIN(a,b) ((a)<(b) ? (a) : (b))
 
-#define SZUL (sizeof(unsigned long int))
-#define ulong unsigned long int
+#define SZUL (sizeof(unsigned long long))
+#define ulong unsigned long long
 
 double *vecallocd(int n);
 int *vecalloci(int n);

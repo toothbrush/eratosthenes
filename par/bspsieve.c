@@ -162,7 +162,7 @@ void bspsieve(){
     bsp_sync();
     bsp_pop_reg(&n);
 
-    printf("Sizeof(unsigned long int) == %zu\n", sizeof(unsigned int));
+    printf("Sizeof(ulong) == %zu\n", SZUL);
     nl= blockSize(p,s,n); // how big must s's block be?
     printf("P(%lu) tries to alloc vec of %lu ulongs = %lu Mb\n",s,  nl, nl*SZUL/1024/1024);
     x= vecalloculi(nl);

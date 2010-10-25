@@ -84,7 +84,7 @@ void vecfreed(double *pd){
 
 } /* end vecfreed */
 
-void vecfreeuli(unsigned long *pi){
+void vecfreeuli(ulong *pi){
     /* This function frees a vector of integers */
 
     if (pi!=NULL)
