@@ -1,7 +1,7 @@
 CC= mpicc
 #CFLAGS= -O3 
-CFLAGS= -lbsponmpi
-LFLAGS= -lm #-Wl,-rpath -Wl,LIBDIR
+CFLAGS= 
+LFLAGS= -lbsponmpi -lm #-Wl,-rpath -Wl,LIBDIR
 #OBJIP= bspinprod.o bspedupack.o
 OBJBENCH= bspbench.o bspedupack.o
 

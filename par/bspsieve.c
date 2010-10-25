@@ -51,7 +51,7 @@ ulong blockLow(int p, int s, ulong n)
 {
     // this means we have overflowed our max_value
     if(s*n < 0) 
-         printf("Hm. s*n < 0: s=%lld, n=%lld, s*n=%lld\n", s,n,s*n);      
+         printf("Hm. s*n < 0: s=%d, n=%lld, s*n=%lld\n", s,n,s*n);      
     return (s*n)/p; //implicit floor
 }
 
@@ -63,7 +63,7 @@ ulong blockHigh(int p, int s, ulong n)
 int blockOwner(int p, ulong index, ulong n)
 {
     if(p*(index+1) < 0)
-        printf("Hm. p*index < 0: p = %lld, i = %lld, p*i = %lld\n", p, index, p*index);
+        printf("Hm. p*index < 0: p = %d, i = %lld, p*i = %lld\n", p, index, p*index);
     return ((p*(index+1))-1)/n; //implicit floor
 }
 
@@ -175,7 +175,7 @@ void bspsieve(){
     //printf("%zu , %lld \n",SZULL, nl);
     //printf(" nl= %lld and sizeofulong = %zu bytes\n",nl, SZULL);
     printf("P(%d) tries to alloc vec of %lld ulongs", s, nl);
-    printf(", size would be = %zu Mb\n", nl*SZULL/1024/1024);
+    printf(", size would be = %lld Mb\n", nl*SZULL/1024/1024);
     x= vecalloculi(nl);
 
     for (i=0; i<nl; i++){

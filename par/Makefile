@@ -1,6 +1,6 @@
 CC= mpicc
-CFLAGS= -lbsponmpi -g
-LFLAGS= -lm #-Wl,-rpath -Wl,LIBDIR
+CFLAGS= -g -Wall
+LFLAGS= -lm -lbsponmpi #-Wl,-rpath -Wl,LIBDIR
 OBJSIEVE= bspsieve.o bspedupack.o
 
 all: sieve pretty
@@ -18,4 +18,4 @@ bspedupack.o: ../bspedupack.c ../bspedupack.h
 	$(CC) $(CFLAGS) -c ../bspedupack.c
 
 clean:
-	rm -f *.o ip sieve
+	rm -f *.o sieve
