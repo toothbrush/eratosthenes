@@ -50,11 +50,11 @@ synchronisation time and communication speed.
 The two computers tested in this section, as already mentioned, are a recent
 MacBook\footnote{Core2Duo 2.4Ghz with 4GB memory.} and Huygens, the national
 supercomputer. Of course we didn't do the benchmark on all the nodes of Huygens,
-as there are in the order of three thousand of them, but only on 2 and 32 nodes. 
+as there are in the order of three thousand of them, but only on 1 and 2 nodes. 
 
 The benchmark that has been done is the one included in BSPedupack which can be
 found at \cite{edupack}, referred to as \texttt{bspbench.c}. The results are
-presented in Figures 1..2. 
+presented in Figures \ref{fig:bench-huy-put-p2} to \ref{fig:bench-laptop-get-p56}. 
 \subsection{Original benchmark}
 \begin{figure}[h]
     \begin{center}
@@ -74,7 +74,19 @@ presented in Figures 1..2.
     \label{fig:bench-laptop-put-p2}
 \end{figure}
 
-Story about distributed $P=2$ on Huygens. Talk about above 2 figs. 
+In figures \ref{fig:bench-huy-put-p2} and \ref{fig:bench-laptop-put-p2} we see
+the results of running the plain benchmark on Huygens and the laptop.
+Interestingly enough, the laptop seems to perform better than Huygens in all
+respects. The only reason we can give for this is that the shared cores on
+Huygens are a lot more overworked than the laptop when it is doing nothing else
+other than running the benchmark. In a sense this is therefore an unfair
+comparison.
+
+Note that on Huygens we used 1 node, which means the communication would
+probably be cheaper than if we were to do the same benchmark, but distribute it
+over 2 nodes, so the communication has to leave the node as opposed to being
+local, as it would have been in Figure  \ref{fig:bench-huy-put-p2}. 
+
 
 \begin{figure}[h]
     \begin{center}
@@ -86,10 +98,17 @@ Story about distributed $P=2$ on Huygens. Talk about above 2 figs.
     \label{fig:bench-huy-put-p2-dist}
 \end{figure}
 
-Note the increased communication time??
+The results shown in Figure \ref{fig:bench-huy-put-p2-dist} are when we select 2
+distinct nodes on Huygens. We indeed see a marked increase in communication cost
+$g$ and synchronisation cost $l$. As we would expect, the computational rate $r$
+is basically unaffected by this change, as the work needing to be done locally
+is the same as before. 
 
 \subsection{Changing to \texttt{get}s}
-Now we change puts into gets\ldots
+Now we change puts into gets in the benchmark algorithm. The hypothesis is that
+getting is more expensive than putting, since a put is passive with respect to
+the receiver, whereas when getting both processors have to work. See figures
+\ref{fig:bench-huy-get-p2} to \ref{fig:bench-huy-get-p2-dist}. 
 
 \begin{figure}[h]
     \begin{center}
@@ -108,6 +127,13 @@ Now we change puts into gets\ldots
     \label{fig:bench-laptop-get-p2}
 \end{figure}
 
+Comparing \ref{fig:bench-huy-get-p2} and \ref{fig:bench-laptop-get-p2} to the
+corresponding figures in the previous section, we indeed see a marked increase
+in communication cost (note: not in synchronisation cost) on Huygens. Surprisingly enough, on the laptop, this
+increase is not so great on the laptop. We expect and observe the
+synchronisation time to be comparable with puts and gets, since this change
+shouldn't affect the synchronisation steps. 
+
 \begin{figure}[h]
     \begin{center}
         \includegraphics{img/bench-huy-get-p2-dist.pdf}
@@ -118,7 +144,25 @@ Now we change puts into gets\ldots
     \label{fig:bench-huy-get-p2-dist}
 \end{figure}
 
-Now we try 56 procs on the MacBook
+Once again, we try forcing the benchmark to run on 2 distinct nodes on Huygens
+(see Figure \ref{fig:bench-huy-get-p2-dist}). Again the computation rate $r$ is
+the same, communication cost $g$ is significantly increased, but in this case,
+also $l$ suffers, increasing by nearly a factor of 2. We cannot give an
+explanation for this, and attribute it to incidental load on the shared node
+being used. Note that this is plausible seeing the entire benchmark runs in
+about 20 seconds, which will never give a very accurate picture of a computers
+average performance. 
+
+As a last effort at producing more interesting results, we run the benchmark on
+the laptop with $P=56$. This isn't done on Huygens since it will be a waste of
+resources and will probably have to wait a long time in the queue. See Figure
+\ref{fig:bench-laptop-get-p56}. The results here speak for themselves: the
+computation rate $r$ is still independent of the configuration, but the
+communication cost and specifically synchronisation time skyrocket. The reasons
+for this are obvious: namely, communication becomes more costly when the
+underlying BSP layer has to manage more and more processors, and the
+synchronisation cost is hypothesised to be O($n$) (i.e. linearly increasing in
+the number of processors used, $N$). 
 
 \begin{figure}[h]
     \begin{center}
