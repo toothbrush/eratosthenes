@@ -3,7 +3,11 @@
 #include <math.h>
 #include <time.h>
 
-#define ulong unsigned long long
+#define ulong long
+
+
+//hmmm?
+//unsigned long long
 
 enum bool { true, false };
 ulong nextPrime(ulong, enum bool*) ;

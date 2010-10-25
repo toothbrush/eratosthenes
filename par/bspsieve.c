@@ -37,17 +37,21 @@ ulong findMinimum(int p, ulong* ks)
 }
 ulong globalIdx(int p, int s, ulong n, ulong local)
 {
+    if(local+blockLow(p,s,n) < 0) 
+         printf("+FouTJE\n");
     return local+blockLow(p,s,n);
 }
 ulong localIdx(int p, int s, ulong n, ulong global)
 {
+   // if(global-blockLow(p,s,n) < 0) 
+   //      printf("-FouTJE: global = %lld, blockLow = %lld\n >>>>> p=%d, s=%d, n=%lld\n", global, blockLow(p,s,n), p,s,n);
     return global-blockLow(p,s,n);
 }
 ulong blockLow(int p, int s, ulong n)
 {
     // this means we have overflowed our max_value
     if(s*n < 0) 
-         printf("Hm. s*n < 0: s=%lu, n=%lu, s*n=%lu\n", s,n,s*n);      
+         printf("Hm. s*n < 0: s=%lld, n=%lld, s*n=%lld\n", s,n,s*n);      
     return (s*n)/p; //implicit floor
 }
 
@@ -58,8 +62,8 @@ ulong blockHigh(int p, int s, ulong n)
 
 int blockOwner(int p, ulong index, ulong n)
 {
-    if(p*index < 0)
-        printf("Hm. p*index < 0: p = %lu, i = %lu, p*i = %lu\n", p, index, p*index);
+    if(p*(index+1) < 0)
+        printf("Hm. p*index < 0: p = %lld, i = %lld, p*i = %lld\n", p, index, p*index);
     return ((p*(index+1))-1)/n; //implicit floor
 }
 
@@ -68,6 +72,8 @@ ulong blockSize(int p, int s, ulong n){
        of length n distributed over p processors with balanced
        block distribution (see paper). */
 
+    if(blockLow(p,s+1,n) - blockLow(p,s,n) < 0 ) 
+        printf("goddammit\n");
     return  blockLow(p,s+1,n)-blockLow(p,s,n) ; 
 
 } /* end blockSize */
@@ -105,13 +111,19 @@ ulong nextPrime(int p, int s, ulong n, ulong k, ulong *x)
 {
     // find minimal i s.t. i > k and i unmarked
 
+    if(p!=2)
+        printf("okay, numProcs = %d??\n", p);
     ulong newK = k+1;
     ulong local = MAX(
                     localIdx(p,s,n,newK),
                     0); // do not consider primes outside our range
 
+    if(local > n/p)
+        printf("ooooops: localidx=%lld \n",localIdx(p,s,n,newK));
     while(local < blockSize(p,s,n)-1 && x[local] == 0)
+    {
         local++;
+    }
 
     if(x[local] == 0)
     {
@@ -128,7 +140,7 @@ ulong nextPrime(int p, int s, ulong n, ulong k, ulong *x)
 
 void bspsieve(){
     
-    double alpha, time0, time1;
+    double time0, time1;
     ulong *x;  // local list of candidates
     ulong *ks; //place for proc0 to store intermediate ks
     ulong  
@@ -145,29 +157,28 @@ void bspsieve(){
     
     bsp_begin(P);
     p= bsp_nprocs(); /* p = number of processors obtained */ 
-    printf("Now we have %lu processors.\n", p);
+    printf("Now we have %lld processors.\n", p);
     s= bsp_pid();    /* s = processor number */ 
     if (s==0){
         if(n<0)
             bsp_abort("Error in input: n is negative");
         ks = vecalloculi(p);
-        if(ks == NULL)
-            bsp_abort("Couldn't allocate ks[]!\n");
     }
 
-    bsp_push_reg(&n,SZUL);
+    bsp_push_reg(&n,SZULL);
     bsp_sync();
 
-    bsp_get(0,&n,0,&n,SZUL); //everyone reads N from proc 0
+    bsp_get(0,&n,0,&n,SZULL); //everyone reads N from proc 0
     bsp_sync();
     bsp_pop_reg(&n);
 
-    printf("Sizeof(ulong) == %zu\n", SZUL);
+    //printf("Sizeof(ulong) == %zu\n", SZULL);
     nl= blockSize(p,s,n); // how big must s block be?
-    printf("P(%lu) tries to alloc vec of %lu ulongs = %zu Mb\n",s,  nl, nl*SZUL/1024/1024);
+    //printf("%zu , %lld \n",SZULL, nl);
+    //printf(" nl= %lld and sizeofulong = %zu bytes\n",nl, SZULL);
+    printf("P(%d) tries to alloc vec of %lld ulongs", s, nl);
+    printf(", size would be = %zu Mb\n", nl*SZULL/1024/1024);
     x= vecalloculi(nl);
-    if(x == NULL)
-        bsp_abort("Couldn't allocate x[]!\n");
 
     for (i=0; i<nl; i++){
         // start by assuming everything is prime, except 1
@@ -186,7 +197,7 @@ void bspsieve(){
         bspmarkmultiples(p,s,n,k,x);
         k = nextPrime(p,s,n,k,x);
 
-        bsp_push_reg(&k, SZUL);
+        bsp_push_reg(&k, SZULL);
         bsp_sync();
 
         if(s==0)
@@ -194,7 +205,7 @@ void bspsieve(){
             ks[0] = k; // my k
             for(i=1;i<p; i++)
             {
-                bsp_get(i, &k, 0, &ks[i], SZUL);
+                bsp_get(i, &k, 0, &ks[i], SZULL);
             }
         }
 
@@ -207,7 +218,7 @@ void bspsieve(){
         bsp_sync();
 
         //broadcast minimum 
-        bsp_get(0,&k,0,&k,SZUL); 
+        bsp_get(0,&k,0,&k,SZULL); 
         bsp_sync();
 
         bsp_pop_reg(&k);
@@ -218,12 +229,12 @@ void bspsieve(){
     time1=bsp_time();
 
     ulong primes= 0;
-    //printf("Processor %lu primes: \n", s); 
+    //printf("Processor %lld primes: \n", s); 
     for(i = 0; i < blockSize(p,s,n); i++)
         if( x[i] != 0)
             primes++;
-     //       printf("  %lu is prime\n", globalIdx(p,s,n,i));
-     printf("proc %lu finds %lu primes.\n", s, primes);
+     //       printf("  %lld is prime\n", globalIdx(p,s,n,i));
+     printf("proc %d finds %lld primes.\n", s, primes);
 
     fflush(stdout);
     if (s==0){
@@ -247,15 +258,15 @@ int main(int argc, char **argv){
         printf("Usage: %s N\n", argv[0]);
         bsp_abort("Incorrect invocation.\n");
     }
-    sscanf(argv[1], "%lu", &N);
+    sscanf(argv[1], "%lld", &N);
 
-    printf("max prime requested = %lu\n", N);
+    printf("max prime requested = %lld\n", N);
     P = bsp_nprocs(); // maximum amount of procs
 
     if ( blockSize(P, 0, N) < sqrt(N))
-        printf("WARNING: such a large P (%lu) with relatively small N (%lu) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
+        printf("WARNING: such a large P (%lld) with relatively small N (%lld) is inefficient. \n Choosing a lower P is recommended.\n\n", P, N);
 
-    printf("Using %lu processors. \n", P);
+    printf("Using %lld processors. \n", P);
 
     /* SPMD part */
     bspsieve();

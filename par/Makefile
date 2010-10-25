@@ -1,5 +1,5 @@
 CC= mpicc
-CFLAGS= -lbsponmpi
+CFLAGS= -lbsponmpi -g
 LFLAGS= -lm #-Wl,-rpath -Wl,LIBDIR
 OBJSIEVE= bspsieve.o bspedupack.o
 

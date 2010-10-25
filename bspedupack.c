@@ -27,7 +27,7 @@ ulong *vecalloculi(ulong n)
     if (n==0){
         pi= NULL; 
     } else { 
-        pi= (ulong *)malloc(n*sizeof(ulong));
+        pi= (ulong *)malloc(n*SZULL);
         if (pi==NULL)
             bsp_abort("vecalloculi: not enough memory");
     }
