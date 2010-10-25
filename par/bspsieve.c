@@ -141,8 +141,7 @@ void bspsieve(){
     double time0, time1;
     ulong *x;  // local list of candidates
     ulong *ks; //place for proc0 to store intermediate ks
-    ulong  
-          n, 
+    ulong n, 
           nl, 
           i, 
           iglob;
