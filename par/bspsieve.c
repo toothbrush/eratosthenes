@@ -26,12 +26,23 @@ ulong N; /* requested max prime */
 ulong findMinimum(int p, ulong* ks)
 {
 
-    ulong min = ULONG_MAX;
+    ulong min = LLONG_MAX;
+    printf("ulong_max ?= %lld\n", min);
     ulong i;
     for(i = 0; i<p; i++)
     {
-        min = MIN(ks[i], min); // range OK
+        printf("  %lld  ", ks[i]);
+        if(ks[i] < min)
+        {
+            min = ks[i];
+            printf ( "*");
+        }
+        else
+        {
+            ;
+        }
     }
+    printf("\n returning minimum = %lld \n", min);
 
     return min;
 }
@@ -99,6 +110,7 @@ void bspmarkmultiples(int p, int s, ulong n, ulong k, ulong *x)
             first = k - (blockLow(p,s,n) % k); // start at first multiple of k in block
     }
 
+    printf("first = %lld, blockSize = %lld, k = %lld, x = %p, \n", first, blockSize(p,s,n), k, x);
     for (i=first; i < blockSize(p,s,n); i+= k)
     {
         x[i] = 0; //not a prime
@@ -192,8 +204,10 @@ void bspsieve(){
 
     while( k*k <= n )
     {
+        printf("(1) working on k=%lld\n", k);
         bspmarkmultiples(p,s,n,k,x);
         k = nextPrime(p,s,n,k,x);
+        printf("(2) working on k=%lld\n", k);
 
         bsp_push_reg(&k, SZULL);
         bsp_sync();
@@ -204,6 +218,7 @@ void bspsieve(){
             for(i=1;i<p; i++)
             {
                 bsp_get(i, &k, 0, &ks[i], SZULL);
+
             }
         }
 
@@ -212,6 +227,7 @@ void bspsieve(){
         if(s==0)
         {
             k = findMinimum(p,ks);
+        printf("(3) working on k=%lld\n", k);
         }
         bsp_sync();
 
@@ -220,6 +236,7 @@ void bspsieve(){
         bsp_sync();
 
         bsp_pop_reg(&k);
+        printf("(4) working on k=%lld\n", k);
     }
 
     // end work
