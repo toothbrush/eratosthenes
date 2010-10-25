@@ -34,6 +34,8 @@ int main(int argc, char** argv)
 
     printf("Trying to alloc %lu Mb... \n",N*sizeof(enum bool)/1024/1024); 
     enum bool *A = malloc(sizeof(enum bool)*N);
+    if(A == NULL)
+    { printf("Bad news, malloc failed. Try lower N.\n"); exit(1); }
 
     A[0] = false;
     A[1] = false;
@@ -45,7 +47,7 @@ int main(int argc, char** argv)
 
     ulong current = 2;
 
-    while (current <= sqrt((double)N))
+    while (current*current <= N)
     {
         for(i = current; i <= N/current; i++)
         {
