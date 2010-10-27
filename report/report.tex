@@ -113,7 +113,7 @@ block distribution, where the last processor potentially has only 1 element.
 This distribution causes the number of elements per processor to differ by at
 most 1. 
 
-\subsection{The parallel algorithm}
+\subsection{The parallel algorithm}\label{sec:paralg}
 
 More formally, the algorithm becomes as follows. In common BSP style, the
 algorithm is parameterised by the current processor ID $s$. The functions
@@ -143,7 +143,13 @@ implementational details.
 
 \subsection{Complexity}
 
-\ldots
+We now analyse the time complexity of the algorithm given in Section
+\ref{sec:paralg}. This will give an idea of the expected performance of the
+parallel algorithm, compared to the sequential one. Firstly, we see 4
+supersteps, namely the local crossing off of primes followed by finding the
+smallest prime, then the communication of the found primes, then the global find
+minimum prime and broadcast. The communication cost is 2($p$-1) per loop (back
+and forth communication of least prime). This loop is done $2 .. sqrt n ??? $. 
 
 \section{Performance}
 
