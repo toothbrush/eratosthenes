@@ -143,7 +143,41 @@ implementational details.
 
 \subsection{Complexity}
 
-\ldots
+Before running our experiments, we proceed to analyse the theoretical complexity of the parallel algorithm. 
+This will give an idea of what to expect in the following section.
+
+First we look at the main loop, which runs for $k \in [1 .. \sqrt n]$. The step
+size can be assumed to be such that at most the main loop will be done once for each prime
+in the interval $[1 .. \sqrt n]$. We use Gauss' approximation (\ref{gauss}) of the prime distribution, which is 
+\begin{eqnarray}
+    \int_2^N \frac{1}{\log t} \d t.
+    \label{gauss}
+\end{eqnarray}
+
+Next we look at the amount of work done in each loop iteration. Roughly $\frac{n}{p k}$ numbers are crossed out, 
+$n/p$ flops are required to find local smallest primes, and $p$ flops are required to find the global prime.
+This, along with Gauss' approximation, leads to total (discretised) computation costs of 
+\begin{equation}
+    \sum_{k=2}^{\sqrt n} \left( \frac{1}{\log k} \left( \frac{n}{p k} + p + \frac{n}{p}\right) \right) .
+\end{equation}
+
+We assume that the integral over $\frac{1}{\log t}$ is $O(n \log \log n)$, which leads to computation costs
+of $O( n \log \log n +p + \frac{n}{p})$, which is still dominated by the $n \log \log n$ term, which is the number 
+of cross-offs that need to be done. 
+
+The communication required is also $2(p-1)$ for each loop iteration, as the global and local 
+next primes need to be broadcast (in other words, $b = O(p n \log \log n)$ in the total cost equation). 
+
+Finally, there are 4 supersteps, namely the local work of crossing off non-primes, then the broadcast
+of local next primes, then the computation of global minimum prime, then the broadcast of that value. 
+
+Ignoring the non-dominating initial setup costs (initialising arrays etc.) this leads to costs of the 
+form \ref{cost}.
+
+\begin{equation}
+    O(n \log\log n) + O(p n \log \log n)g + 4l
+    \label{cost}
+\end{equation}
 
 \section{Performance}
 
@@ -197,7 +231,26 @@ In all cases the output of the algorithm was verified to produce the correct
 primes. Mathematica was used as the authority on the number of primes below a
 given number. 
 
-\subsection{Analysis of results}
+Finally, it is interesting to look at the so-called speedup plot. This is the time for each run,
+divided by the time when $P=1$. This gives an idea how well the algorithm scales with number of 
+processors. 
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics{img/speedup}
+    \end{center}
+    \caption{The speedup plot for the parallel implementation. The red points are the MacBook, and the blue points 
+    represent Huygens. The solid line is ideal parallel scaling. }
+    \label{fig:speedup}
+\end{figure}
+
+We see quite reasonable behaviour in the speedup plot (Figure \ref{fig:speedup}), since on Huygens, the speedup
+is close to the ideal parallelisation expectation. Evidently there is still some room for improvement though. The
+speedup drops off dramatically after $P=16$, this is explained in Section \ref{sec:analysis}. The results for the 
+MacBook are rather poor, the reason for this being that it only has 2 cores, so the incurred overhead for
+$P>2$ dominates. 
+
+\subsection{Analysis of results}\label{sec:analysis}
 
 A number of things are clear when we look at the results of Table
 \ref{tbl:results}. First of all, we see that the laptop indeed outperforms
