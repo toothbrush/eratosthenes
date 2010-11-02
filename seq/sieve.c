@@ -81,5 +81,5 @@ void printPrimes(ulong N, enum bool* A)
             nPrimes++;
         }
 
-    printf("So that's %lu primes.\n", nPrimes); 
+    printf("==> %lu primes.\n", nPrimes); 
 }

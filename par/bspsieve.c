@@ -46,7 +46,7 @@ ulong localIdx(int p, int s, ulong n, ulong global)
 ulong blockLow(int p, int s, ulong n)
 {
     // this means we have overflowed our max_value
-    // shouldn't happen using LLONGs
+    // should not happen using LLONGs
     if(s*n < 0) 
          printf("Hm. s*n < 0: s=%d, n=%lld, s*n=%lld\n", s,n,s*n);      
     return (s*n)/p; //implicit floor
